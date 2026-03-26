@@ -49,11 +49,31 @@
       <a href="shop.html">商品</a>
       <a href="about.html">会社概要</a>
       <a href="contact.html">お問い合わせ</a>
+      <a href="legal-notice.html">特定商取引法に基づく表記</a>
       <a href="cart.html" class="cart-link">カート (0)</a>
     </div>
   </header>
 
   <main class="contact-page-clean">
+    <section class="product-breadcrumb">
+      <div class="container">
+        <p>
+          <a href="index.html">ホーム</a> /
+          <span>お問い合わせ</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="shop-hero">
+      <div class="container">
+        <p class="section-label">Contact</p>
+        <h1>お問い合わせ</h1>
+        <p class="shop-hero-text">
+          商品に関するご質問やご注文後のお問い合わせは、こちらからご連絡ください。
+        </p>
+      </div>
+    </section>
+
     <section class="contact-map-section">
       <div class="contact-map-wrap">
         <iframe
@@ -69,13 +89,18 @@
     <section class="contact-clean-section">
       <div class="container contact-clean-grid">
         <div class="contact-clean-info">
-          <p class="contact-clean-line">いつでもお電話ください：+81 50-1724-2700</p>
+          <p class="contact-clean-line">お電話でのお問い合わせ：050-1724-2700</p>
           <p class="contact-clean-line">メールでのお問い合わせ：luxeliving@e-mail.jp</p>
 
           <div class="contact-clean-address">
             <p>香川倉庫（Kagawa）</p>
             <p>〒761-0904</p>
             <p>香川県さぬき市大川町田面483番地</p>
+          </div>
+
+          <div class="contact-clean-address" style="margin-top: 24px;">
+            <p>各種ご案内</p>
+            <p><a href="legal-notice.html">特定商取引法に基づく表記</a></p>
           </div>
         </div>
 
@@ -86,35 +111,61 @@
 
           <form class="contact-clean-form" id="contactForm">
             <div class="contact-clean-field">
-              <label for="name">Your name</label>
+              <label for="name">お名前</label>
               <input type="text" id="name" name="name" required />
             </div>
 
             <div class="contact-clean-field">
-              <label for="email">Your email</label>
+              <label for="email">メールアドレス</label>
               <input type="email" id="email" name="email" required />
             </div>
 
             <div class="contact-clean-field">
-              <label for="subject">Subject</label>
+              <label for="subject">件名</label>
               <input type="text" id="subject" name="subject" required />
             </div>
 
             <div class="contact-clean-field">
-              <label for="message">Your message (optional)</label>
+              <label for="message">お問い合わせ内容</label>
               <textarea id="message" name="message"></textarea>
             </div>
 
-            <button type="submit" class="contact-submit-btn">SUBMIT</button>
+            <button type="submit" class="contact-submit-btn">送信する</button>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="contact-clean-footer">
-    <div class="container">
-      <p>Luxelivingjp-2026. Phone: +81 50-1724-2700, email: luxeliving@e-mail.jp</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="legal-notice.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:luxeliving@e-mail.jp">luxeliving@e-mail.jp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
     </div>
   </footer>
 
