@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ご注文ありがとうございます | Luxe Living Japan</title>
+  <meta
+    name="description"
+    content="Luxe Living Japan のご注文完了ページです。"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="shop.html" class="header-link desktop-only">商品</a>
+          <a href="about.html" class="header-link desktop-only">会社概要</a>
+          <a href="contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">ホーム</a>
+      <a href="shop.html">商品</a>
+      <a href="about.html">会社概要</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="success-page" style="padding: 80px 0;">
+    <div class="container" style="max-width: 900px;">
+      <div
+        style="
+          background: #fff;
+          border: 1px solid #e8e2da;
+          border-radius: 28px;
+          padding: 48px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        "
+      >
+        <p class="section-label">Order Complete</p>
+        <h1 style="font-family:'Playfair Display', serif; font-size: clamp(36px, 5vw, 64px); line-height:1.05; margin-bottom: 18px;">
+          ご注文ありがとうございます
+        </h1>
+
+        <p style="font-size: 16px; color: #5f5a55; line-height: 1.8; margin-bottom: 32px;">
+          ご注文を受け付けました。内容を確認後、配送準備を進めさせていただきます。
+          下記にご注文情報を表示しています。
+        </p>
+
+        <div
+          id="orderInfo"
+          style="
+            display: grid;
+            gap: 16px;
+            padding: 24px;
+            background: #faf8f5;
+            border: 1px solid #ece6de;
+            border-radius: 20px;
+            margin-bottom: 32px;
+          "
+        >
+          <p style="margin: 0;">注文情報を読み込み中です...</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          <a href="shop.html" class="btn btn-dark">商品一覧へ戻る</a>
+          <a href="index.html" class="btn btn-primary">ホームへ戻る</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@luxelivingjapan.com">hello@luxelivingjapan.com</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    async function loadOrderInfo() {
+      const params = new URLSearchParams(window.location.search);
+      const sessionId = params.get("session_id");
+      const orderInfo = document.getElementById("orderInfo");
+
+      if (!sessionId) {
+        orderInfo.innerHTML = `
+          <p style="margin:0; font-weight:600;">注文情報が見つかりません。</p>
+          <p style="margin:0; color:#6b665f;">決済完了後のURLからこのページを開いてください。</p>
+        `;
+        return;
+      }
+
+      try {
+        const response = await fetch(`/checkout-session?session_id=${sessionId}`);
+        const session = await response.json();
+
+        if (session.error) {
+          orderInfo.innerHTML = `
+            <p style="margin:0; font-weight:600;">注文情報の取得に失敗しました。</p>
+            <p style="margin:0; color:#6b665f;">${session.error}</p>
+          `;
+          return;
+        }
+
+        const lineItem = session.line_items?.data?.[0];
+        const customerEmail = session.customer_details?.email || "-";
+        const amountTotal = session.amount_total
+          ? `¥${Number(session.amount_total).toLocaleString("ja-JP")}`
+          : "-";
+
+        orderInfo.innerHTML = `
+          <div style="display:grid; gap:12px;">
+            <div>
+              <p style="margin:0; font-size:13px; color:#8a847d;">注文番号</p>
+              <p style="margin:4px 0 0; font-weight:600;">${session.id || "-"}</p>
+            </div>
+
+            <div>
+              <p style="margin:0; font-size:13px; color:#8a847d;">メールアドレス</p>
+              <p style="margin:4px 0 0; font-weight:600;">${customerEmail}</p>
+            </div>
+
+            <div>
+              <p style="margin:0; font-size:13px; color:#8a847d;">商品名</p>
+              <p style="margin:4px 0 0; font-weight:600;">${lineItem?.description || "-"}</p>
+            </div>
+
+            <div>
+              <p style="margin:0; font-size:13px; color:#8a847d;">合計金額</p>
+              <p style="margin:4px 0 0; font-weight:600;">${amountTotal}</p>
+            </div>
+
+            <div>
+              <p style="margin:0; font-size:13px; color:#8a847d;">支払い状況</p>
+              <p style="margin:4px 0 0; font-weight:600;">${session.payment_status || "-"}</p>
+            </div>
+          </div>
+        `;
+      } catch (error) {
+        console.error(error);
+        orderInfo.innerHTML = `
+          <p style="margin:0; font-weight:600;">通信エラーが発生しました。</p>
+          <p style="margin:0; color:#6b665f;">時間をおいてもう一度ご確認ください。</p>
+        `;
+      }
+    }
+
+    loadOrderInfo();
+  </script>
+</body>
+</html>

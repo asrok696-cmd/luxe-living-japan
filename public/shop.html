@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品一覧 | Luxe Living Japan</title>
+  <meta
+    name="description"
+    content="Luxe Living Japanの商品一覧ページ。上質で洗練された家具をご紹介します。"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="shop.html" class="header-link desktop-only">商品</a>
+          <a href="about.html" class="header-link desktop-only">会社概要</a>
+          <a href="contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-panel-inner">
+        <input type="text" placeholder="商品名で検索" />
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">ホーム</a>
+      <a href="shop.html">商品</a>
+      <a href="about.html">会社概要</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="shop-page">
+    <section class="shop-hero">
+      <div class="container">
+        <p class="section-label">Collection</p>
+        <h1>商品一覧</h1>
+        <p class="shop-hero-text">
+          日常に静かな高級感をもたらす家具を、厳選してご紹介します。
+        </p>
+      </div>
+    </section>
+
+    <section class="shop-layout-section">
+      <div class="container shop-layout">
+        <aside class="shop-sidebar">
+          <div class="sidebar-block">
+            <h3>カテゴリー</h3>
+            <ul class="shop-filter-list" data-filter-group="category">
+              <li><a href="#" class="active" data-filter-value="all">すべて</a></li>
+              <li><a href="#" data-filter-value="ソファ">ソファ</a></li>
+              <li><a href="#" data-filter-value="ベッド">ベッド</a></li>
+              <li><a href="#" data-filter-value="テーブル">テーブル</a></li>
+              <li><a href="#" data-filter-value="ダイニングセット">ダイニングセット</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>空間</h3>
+            <ul class="shop-filter-list" data-filter-group="space">
+              <li><a href="#" class="active" data-filter-value="all">すべて</a></li>
+              <li><a href="#" data-filter-value="リビング">リビング</a></li>
+              <li><a href="#" data-filter-value="ラウンジ">ラウンジ</a></li>
+              <li><a href="#" data-filter-value="ベッドルーム">ベッドルーム</a></li>
+              <li><a href="#" data-filter-value="ダイニング">ダイニング</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>価格帯</h3>
+            <ul class="shop-filter-list" data-filter-group="price">
+              <li><a href="#" class="active" data-filter-value="all">すべて</a></li>
+              <li><a href="#" data-filter-value="100000-200000">¥100,000 - ¥200,000</a></li>
+              <li><a href="#" data-filter-value="200001-300000">¥200,000 - ¥300,000</a></li>
+              <li><a href="#" data-filter-value="300001-over">¥300,000以上</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="shop-main">
+          <div class="shop-toolbar">
+            <p id="shopCountText">9件の商品</p>
+
+            <div class="shop-toolbar-right">
+              <label for="sort">並び替え</label>
+              <select id="sort">
+                <option>おすすめ順</option>
+                <option>価格の低い順</option>
+                <option>価格の高い順</option>
+                <option>新着順</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="shop-grid">
+            <a
+              href="product.html?product=luna-lounge-sofa-150"
+              class="shop-product-card"
+              data-category="ソファ"
+              data-space="リビング ラウンジ"
+              data-price="100000-200000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/luna-lounge-sofa-150-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>ルーナ ラウンジソファ 150 ホワイト</h3>
+                <p class="product-type">ソファ</p>
+                <p class="product-price">¥196,900</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=bubble-sofa-270"
+              class="shop-product-card"
+              data-category="ソファ"
+              data-space="リビング ラウンジ"
+              data-price="200001-300000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/bubble-sofa-270-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">人気商品</p>
+                <h3>バブルソファー 270 ベージュ</h3>
+                <p class="product-type">ソファ</p>
+                <p class="product-price">¥262,900</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=luna-curve-sofa-260"
+              class="shop-product-card"
+              data-category="ソファ"
+              data-space="リビング ラウンジ"
+              data-price="200001-300000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/luna-curve-sofa-260-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>ルーナ カーブソファ 260 ベージュ</h3>
+                <p class="product-type">ソファ</p>
+                <p class="product-price">¥218,900</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=ceres-quilted-bed-frame"
+              class="shop-product-card"
+              data-category="ベッド"
+              data-space="ベッドルーム"
+              data-price="100000-200000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/ceres-quilted-bed-frame-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>セレス キルティングベッドフレーム</h3>
+                <p class="product-type">ベッド</p>
+                <p class="product-price">¥196,900</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=nova-bed-frame"
+              class="shop-product-card"
+              data-category="ベッド"
+              data-space="ベッドルーム"
+              data-price="100000-200000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/nova-bed-frame-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>ノヴァ ベッドフレーム</h3>
+                <p class="product-type">ベッド</p>
+                <p class="product-price">¥185,900〜</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=olvia-bed-frame"
+              class="shop-product-card"
+              data-category="ベッド"
+              data-space="ベッドルーム"
+              data-price="100000-200000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/olvia-bed-frame-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>オルビア ベッドフレーム</h3>
+                <p class="product-type">ベッド</p>
+                <p class="product-price">¥185,900〜</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=louve-dining-table-180"
+              class="shop-product-card"
+              data-category="テーブル"
+              data-space="ダイニング"
+              data-price="100000-200000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/louve-dining-table-180-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>ルーヴェ ダイニングテーブル 180</h3>
+                <p class="product-type">テーブル</p>
+                <p class="product-price">¥185,900</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=luna-stone-dining-set-160"
+              class="shop-product-card"
+              data-category="ダイニングセット"
+              data-space="ダイニング"
+              data-price="200001-300000"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/luna-stone-dining-set-160-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">新作</p>
+                <h3>ルーナ ストーンダイニングセット 160</h3>
+                <p class="product-type">ダイニングセット</p>
+                <p class="product-price">¥207,900</p>
+              </div>
+            </a>
+
+            <a
+              href="product.html?product=lagos-dining-set-160"
+              class="shop-product-card"
+              data-category="ダイニングセット"
+              data-space="ダイニング"
+              data-price="300001-over"
+            >
+              <div class="shop-product-image" style="background-image: url('images/placeholders/lagos-dining-set-160-1.jpg');"></div>
+              <div class="shop-product-info">
+                <p class="product-badge">ラグジュアリー</p>
+                <h3>ラゴス ダイニングセット 160</h3>
+                <p class="product-type">ダイニングセット</p>
+                <p class="product-price">¥361,900</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="shop-pagination">
+            <a href="#" class="page-btn active">1</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:luxeliving@e-mail.jp">luxeliving@e-mail.jp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

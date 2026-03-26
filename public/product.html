@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品詳細 | Luxe Living Japan</title>
+  <meta
+    name="description"
+    content="Luxe Living Japanの商品詳細ページ。上質な素材と静かな高級感を兼ね備えた家具をご紹介します。"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="shop.html" class="header-link desktop-only">商品</a>
+          <a href="about.html" class="header-link desktop-only">会社概要</a>
+          <a href="contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-panel-inner">
+        <input type="text" placeholder="商品名で検索" />
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">ホーム</a>
+      <a href="shop.html">商品</a>
+      <a href="about.html">会社概要</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <section class="product-breadcrumb">
+      <div class="container">
+        <p>
+          <a href="index.html">ホーム</a> /
+          <a href="shop.html">商品</a> /
+          <span id="productBreadcrumbTitle">商品詳細</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="product-detail-section">
+      <div class="container product-detail-grid">
+        <div class="product-gallery">
+          <div class="product-main-image" id="productMainImage"></div>
+
+          <div class="product-thumb-grid product-thumb-grid-nine">
+            <button class="product-thumb is-active" type="button" data-image="" aria-label="商品画像 1"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 2"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 3"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 4"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 5"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 6"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 7"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 8"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 9"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 10"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 11"></button>
+            <button class="product-thumb" type="button" data-image="" aria-label="商品画像 12"></button>
+          </div>
+        </div>
+
+        <div
+          class="product-summary"
+          data-product-id="olvia-bed-frame"
+          data-product-name="オルビア ベッドフレーム"
+          data-product-price="185900"
+        >
+          <p class="product-page-label" id="productCategory">ベッド</p>
+          <h1 id="productTitle">オルビア ベッドフレーム</h1>
+          <p class="product-page-price" id="productPrice">¥185,900</p>
+
+          <p class="product-page-description" id="productDescription">
+            やさしいベージュカラーとふっくらとしたフォルムが魅力のラグジュアリーモダンなベッドフレーム。寝室にやわらかく上質な印象を与えます。
+          </p>
+
+          <div class="product-options">
+            <div class="option-group">
+              <label for="color">カラー</label>
+              <select id="color"></select>
+            </div>
+
+            <div class="option-group">
+              <label for="size">サイズ</label>
+              <select id="size"></select>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <input type="number" value="1" min="1" class="quantity-input" id="quantityInput" />
+            <button class="btn btn-dark" id="addToCartButton">カートに追加</button>
+          </div>
+
+          <div class="product-meta">
+            <div class="meta-row">
+              <span>素材</span>
+              <p id="productMaterial">-</p>
+            </div>
+            <div class="meta-row">
+              <span>サイズ</span>
+              <p id="productMetaSize">-</p>
+            </div>
+            <div class="meta-row">
+              <span>配送</span>
+              <p id="productDelivery">-</p>
+            </div>
+            <div class="meta-row">
+              <span>お手入れ</span>
+              <p id="productCare">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-info-section">
+      <div class="container product-info-grid">
+        <div class="info-card">
+          <h2>商品説明</h2>
+          <p id="productInfoDescription">-</p>
+        </div>
+
+        <div class="info-card">
+          <h2>配送・返品について</h2>
+          <p id="productShippingReturns">-</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-products-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Related Products</p>
+          <h2>おすすめ商品</h2>
+        </div>
+
+        <div class="shop-grid">
+          <a href="product.html?product=ceres-quilted-bed-frame" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/ceres-quilted-bed-frame-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>セレス キルティングベッドフレーム</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥196,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=nova-bed-frame" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/nova-bed-frame-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>ノヴァ ベッドフレーム</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥185,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=olvia-bed-frame" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/olvia-bed-frame-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>オルビア ベッドフレーム</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥185,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=louve-dining-table-180" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/louve-dining-table-180-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>ルーヴェ ダイニングテーブル 180</h3>
+              <p class="product-type">テーブル</p>
+              <p class="product-price">¥185,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=luna-stone-dining-set-160" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/luna-stone-dining-set-160-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>ルーナ ストーンダイニングセット 160</h3>
+              <p class="product-type">ダイニングセット</p>
+              <p class="product-price">¥207,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=lagos-dining-set-160" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/lagos-dining-set-160-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">ラグジュアリー</p>
+              <h3>ラゴス ダイニングセット 160</h3>
+              <p class="product-type">ダイニングセット</p>
+              <p class="product-price">¥361,900</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:luxeliving@e-mail.jp">luxeliving@e-mail.jp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

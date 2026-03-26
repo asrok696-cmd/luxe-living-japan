@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>カート | Luxe Living Japan</title>
+  <meta
+    name="description"
+    content="Luxe Living Japanのカートページ。選択した商品の内容をご確認いただけます。"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="shop.html" class="header-link desktop-only">商品</a>
+          <a href="about.html" class="header-link desktop-only">会社概要</a>
+          <a href="contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-panel-inner">
+        <input type="text" placeholder="商品名で検索" />
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">ホーム</a>
+      <a href="shop.html">商品</a>
+      <a href="about.html">会社概要</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <section class="product-breadcrumb">
+      <div class="container">
+        <p>
+          <a href="index.html">ホーム</a> /
+          <a href="shop.html">商品</a> /
+          <span>カート</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="shop-hero">
+      <div class="container">
+        <p class="section-label">Cart</p>
+        <h1>カート</h1>
+        <p class="shop-hero-text">
+          選択した商品の内容をご確認のうえ、お手続きへお進みください。
+        </p>
+      </div>
+    </section>
+
+    <section class="cart-section" style="padding: 56px 0 90px;">
+      <div class="container cart-layout">
+        <div class="cart-items-wrap">
+          <div id="cartItems" class="cart-items-list"></div>
+
+          <div id="emptyCartMessage" class="empty-cart-message" style="display: none;">
+            <h2>カートは空です</h2>
+            <p>まだ商品が追加されていません。商品一覧からお探しください。</p>
+            <a href="shop.html" class="btn btn-dark">商品一覧を見る</a>
+          </div>
+        </div>
+
+        <aside class="cart-summary-card">
+          <p class="section-label">Summary</p>
+          <h2>ご注文内容</h2>
+
+          <div class="cart-summary-row">
+            <span>商品数</span>
+            <p id="cartSummaryCount">0</p>
+          </div>
+
+          <div class="cart-summary-row">
+            <span>小計</span>
+            <p id="cartSummarySubtotal">¥0</p>
+          </div>
+
+          <div class="cart-summary-row total">
+            <span>合計</span>
+            <p id="cartSummaryTotal">¥0</p>
+          </div>
+
+          <div class="cart-summary-actions">
+            <button type="button" class="btn btn-dark" id="checkoutButton">購入手続きへ進む</button>
+            <button type="button" class="btn btn-light" id="clearCartButton">カートを空にする</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:luxeliving@e-mail.jp">luxeliving@e-mail.jp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

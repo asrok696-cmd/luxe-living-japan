@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Living Japan</title>
+  <meta
+    name="description"
+    content="ミニマルで洗練された家具コレクション。静かな存在感をもつ家具をギャラリーのように提案します。"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="./images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="shop.html" class="header-link desktop-only">商品</a>
+          <a href="about.html" class="header-link desktop-only">会社概要</a>
+          <a href="contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-panel-inner">
+        <input type="text" placeholder="商品名で検索" />
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">ホーム</a>
+      <a href="shop.html">商品</a>
+      <a href="about.html">会社概要</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="mg-home">
+    <section class="mg-hero">
+      <div class="container mg-hero-grid">
+        <div class="mg-hero-copy">
+          <p class="mg-kicker">MODERN GALLERY / CURATED OBJECTS</p>
+          <h1>
+            Objects for<br />
+            quiet rooms<br />
+            and clear minds.
+          </h1>
+          <p class="mg-hero-text">
+            家具をただ並べるのではなく、空間に置かれたときの空気まで含めて提案する。
+            Luxe Living Japan のモダンギャラリーコレクション。
+          </p>
+          <div class="mg-hero-actions">
+            <a href="shop.html" class="btn btn-dark">商品を見る</a>
+            <a href="about.html" class="mg-link">コンセプトを見る</a>
+          </div>
+        </div>
+
+        <div class="mg-hero-visual">
+          <div class="mg-hero-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-grid-section">
+      <div class="container">
+        <div class="mg-grid">
+          <a href="product.html?product=lagos-dining-set-160" class="mg-card mg-card-large">
+            <div
+              class="mg-card-image"
+              style="background-image: url('images/placeholders/lagos-dining-set-160-1.jpg');"
+            ></div>
+            <div class="mg-card-copy">
+              <span>Featured</span>
+              <h3>ラゴス ダイニングセット 160</h3>
+            </div>
+          </a>
+
+          <a href="product.html?product=luna-lounge-sofa-150" class="mg-card">
+            <div
+              class="mg-card-image"
+              style="background-image: url('images/placeholders/luna-lounge-sofa-150-1.jpg');"
+            ></div>
+            <div class="mg-card-copy">
+              <span>ソファ</span>
+              <h3>ルーナ ラウンジソファ 150 ホワイト</h3>
+            </div>
+          </a>
+
+          <a href="product.html?product=louve-dining-table-180" class="mg-card">
+            <div
+              class="mg-card-image"
+              style="background-image: url('images/placeholders/louve-dining-table-180-1.jpg');"
+            ></div>
+            <div class="mg-card-copy">
+              <span>テーブル</span>
+              <h3>ルーヴェ ダイニングテーブル 180</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-statement section">
+      <div class="container mg-statement-grid">
+        <div>
+          <p class="section-label">Statement</p>
+          <h2>Furniture as form, proportion, and atmosphere.</h2>
+        </div>
+        <div>
+          <p class="mg-statement-text">
+            余白、輪郭、素材感。装飾を減らし、必要なものだけを残すことで、
+            家具はより強く、美しく見える。そんな考え方でセレクトしています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-categories section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Categories</p>
+          <h2>ギャラリーから探す</h2>
+        </div>
+
+        <div class="mg-categories-grid">
+          <a href="shop.html" class="mg-category-item">
+            <span>01</span>
+            <h3>ソファ</h3>
+          </a>
+
+          <a href="shop.html" class="mg-category-item">
+            <span>02</span>
+            <h3>ベッド</h3>
+          </a>
+
+          <a href="shop.html" class="mg-category-item">
+            <span>03</span>
+            <h3>テーブル</h3>
+          </a>
+
+          <a href="shop.html" class="mg-category-item">
+            <span>04</span>
+            <h3>ダイニングセット</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-products section">
+      <div class="container">
+        <div class="home-heading-row">
+          <div>
+            <p class="section-label">Selected Works</p>
+            <h2 style="font-family:'Playfair Display', serif; font-size:clamp(34px, 4vw, 56px); line-height:1.08; font-weight:600;">
+              Gallery picks
+            </h2>
+          </div>
+          <a href="shop.html" class="mg-link">すべての商品</a>
+        </div>
+
+        <div class="mg-products-grid">
+          <a href="product.html?product=olvia-bed-frame" class="mg-product-card">
+            <div
+              class="mg-product-image"
+              style="background-image: url('images/placeholders/olvia-bed-frame-1.jpg');"
+            ></div>
+            <div class="mg-product-body">
+              <p class="product-type">ベッド</p>
+              <h3>オルビア ベッドフレーム</h3>
+              <p class="product-price">¥185,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=luna-curve-sofa-260" class="mg-product-card">
+            <div
+              class="mg-product-image"
+              style="background-image: url('images/placeholders/luna-curve-sofa-260-1.jpg');"
+            ></div>
+            <div class="mg-product-body">
+              <p class="product-type">ソファ</p>
+              <h3>ルーナ カーブソファ 260 ベージュ</h3>
+              <p class="product-price">¥218,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=luna-stone-dining-set-160" class="mg-product-card">
+            <div
+              class="mg-product-image"
+              style="background-image: url('images/placeholders/luna-stone-dining-set-160-1.jpg');"
+            ></div>
+            <div class="mg-product-body">
+              <p class="product-type">ダイニングセット</p>
+              <h3>ルーナ ストーンダイニングセット 160</h3>
+              <p class="product-price">¥207,900</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-newsletter section">
+      <div class="container mg-newsletter-box">
+        <div>
+          <p class="section-label">Newsletter</p>
+          <h2>新着コレクションを受け取る</h2>
+          <p>新しいセレクションやコレクション情報を受け取りたい方はこちら。</p>
+        </div>
+
+        <form class="newsletter-form">
+          <input type="email" placeholder="メールアドレスを入力" />
+          <button type="submit" class="btn btn-dark">登録する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:luxeliving@e-mail.jp">luxeliving@e-mail.jp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
