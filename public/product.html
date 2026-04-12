@@ -49,6 +49,7 @@
       <a href="shop.html">商品</a>
       <a href="about.html">会社概要</a>
       <a href="contact.html">お問い合わせ</a>
+      <a href="legal-notice.html">特定商取引法に基づく表記</a>
       <a href="cart.html" class="cart-link">カート (0)</a>
     </div>
   </header>
@@ -87,16 +88,21 @@
 
         <div
           class="product-summary"
-          data-product-id="olvia-bed-frame"
-          data-product-name="オルビア ベッドフレーム"
-          data-product-price="185900"
+          data-product-id="wabisabi-solid-wood-dining-set"
+          data-product-name="ワビサビ 無垢材ダイニングセット"
+          data-product-price="207900"
+          data-storage-type=""
+          data-chair-type=""
+          data-mattress-type=""
+          data-mattress-label=""
+          data-mattress-price="0"
         >
-          <p class="product-page-label" id="productCategory">ベッド</p>
-          <h1 id="productTitle">オルビア ベッドフレーム</h1>
-          <p class="product-page-price" id="productPrice">¥185,900</p>
+          <p class="product-page-label" id="productCategory">ダイニングセット</p>
+          <h1 id="productTitle">ワビサビ 無垢材ダイニングセット</h1>
+          <p class="product-page-price" id="productPrice">¥207,900〜</p>
 
           <p class="product-page-description" id="productDescription">
-            やさしいベージュカラーとふっくらとしたフォルムが魅力のラグジュアリーモダンなベッドフレーム。寝室にやわらかく上質な印象を与えます。
+            天然木の豊かな表情と、有機的で美しいフォルムが魅力のダイニングセット。北欧の侘び寂びスタイルを取り入れた、上質で洗練された食空間を演出します。
           </p>
 
           <div class="product-options">
@@ -109,11 +115,43 @@
               <label for="size">サイズ</label>
               <select id="size"></select>
             </div>
+
+            <div class="option-group" id="storageOptionWrap" style="display: none;">
+              <label for="storageType">収納</label>
+              <select id="storageType"></select>
+            </div>
+
+            <div class="option-group" id="chairOptionWrap" style="display: none;">
+              <label for="chairType">椅子の有無</label>
+              <select id="chairType"></select>
+            </div>
+
+            <div class="option-group" id="mattressOptionWrap" style="display: none;">
+              <label for="mattressToggle">マットレス</label>
+              <select id="mattressToggle">
+                <option value="none">追加しない</option>
+                <option value="add">追加する</option>
+              </select>
+            </div>
+
+            <div class="option-group" id="mattressDetailWrap" style="display: none;">
+              <label for="mattressType">マットレス種類</label>
+              <select id="mattressType">
+                <option value="spring25">スプリング 25cm</option>
+                <option value="spring30">スプリング 30cm</option>
+                <option value="latex25">ラテックス 25cm</option>
+                <option value="latex30">ラテックス 30cm</option>
+              </select>
+              <p id="mattressPriceText" style="margin-top: 10px; font-size: 14px; color: #666;">
+                マットレス価格: ¥0
+              </p>
+            </div>
           </div>
 
           <div class="product-actions">
             <input type="number" value="1" min="1" class="quantity-input" id="quantityInput" />
             <button class="btn btn-dark" id="addToCartButton">カートに追加</button>
+            <button class="btn btn-light" id="buyNowButton" type="button">今すぐ購入</button>
           </div>
 
           <div class="product-meta">
@@ -160,6 +198,16 @@
         </div>
 
         <div class="shop-grid">
+          <a href="product.html?product=wabisabi-solid-wood-dining-set" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/wabisabi-solid-wood-dining-set-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>ワビサビ 無垢材ダイニングセット</h3>
+              <p class="product-type">ダイニングセット</p>
+              <p class="product-price">¥207,900〜</p>
+            </div>
+          </a>
+
           <a href="product.html?product=ceres-quilted-bed-frame" class="shop-product-card">
             <div class="shop-product-image" style="background-image: url('images/placeholders/ceres-quilted-bed-frame-1.jpg');"></div>
             <div class="shop-product-info">
@@ -180,13 +228,501 @@
             </div>
           </a>
 
-          <a href="product.html?product=olvia-bed-frame" class="shop-product-card">
-            <div class="shop-product-image" style="background-image: url('images/placeholders/olvia-bed-frame-1.jpg');"></div>
+          <a href="product.html?product=natural-storage-bed-frame-120" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/natural-storage-bed-frame-120-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">収納付き</p>
+              <h3>ナチュラル ウッド収納ベッドフレーム 120</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥108,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=premium-luxury-bed-frame-185" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/premium-luxury-bed-frame-185-1.jpg');"></div>
             <div class="shop-product-info">
               <p class="product-badge">新作</p>
-              <h3>オルビア ベッドフレーム</h3>
+              <h3>プレミアム ラグジュアリーベッドフレーム 185</h3>
               <p class="product-type">ベッド</p>
-              <p class="product-price">¥185,900〜</p>
+              <p class="product-price">¥174,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=premium-luxury-bed-frame-140-single" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/premium-luxury-bed-frame-140-single-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>プレミアム ラグジュアリーベッドフレーム 140 シングル商品</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥174,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=premium-luxury-bed-frame-140-fixed" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/premium-luxury-bed-frame-140-fixed-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>プレミアム ラグジュアリーベッドフレーム 140</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥174,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=modern-luxury-bed-frame-120" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/modern-luxury-bed-frame-120-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">2色展開</p>
+              <h3>モダン ラグジュアリーベッドフレーム 120</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥174,900</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=louve-dining-table-set-140" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/louve-dining-table-set-140-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>ルーヴェ ダイニングテーブルセット</h3>
+              <p class="product-type">ダイニングセット</p>
+              <p class="product-price">¥218,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=natural-wood-bed-frame" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/natural-wood-bed-frame-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>ナチュラル ウッドベッドフレーム</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥75,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=natural-storage-bed-frame-140" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/natural-storage-bed-frame-140-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">収納付き対応</p>
+              <h3>ナチュラル ウッド収納ベッドフレーム 140</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥104,500〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=premium-luxury-bed-frame-160" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/premium-luxury-bed-frame-160-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>プレミアム ラグジュアリーベッドフレーム 160</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥174,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=hokku-solid-wood-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/hokku-solid-wood-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ホック ソリッドウッドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥174,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=candy-cloud-sofa-l" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/candy-cloud-sofa-l-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>キャンディ クラウドソファ L</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥482,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxury-wide-sofa-392" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxury-wide-sofa-392-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">超大型</p>
+    <h3>ラグジュアリー ワイドソファ 392</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥379,000</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxury-leather-sofa-293" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxury-leather-sofa-293-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">本革対応</p>
+    <h3>ラグジュアリー レザーソファ 293</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥394,900</p>
+  </div>
+</a>
+
+<a href="product.html?product=victoria-l-sofa-275" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/victoria-l-sofa-275-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">本革対応</p>
+    <h3>ヴィクトリア L字ソファ 275</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥394,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=modern-luxury-l-sofa-246" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/modern-luxury-l-sofa-246-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">L字ソファ</p>
+    <h3>モダン ラグジュアリー L字ソファ 246</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥372,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=modern-luxury-l-sofa-250" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/modern-luxury-l-sofa-250-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">L字ソファ</p>
+    <h3>モダン ラグジュアリー L字ソファ 250</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥372,900〜</p>
+  </div>
+</a>
+<a href="product.html?product=luxury-sectional-sofa-310-l" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxury-sectional-sofa-310-l-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">L字ソファ</p>
+    <h3>ラグジュアリー モダン L字型セクショナルソファ 310</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥449,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxury-candy-sofa-280" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxury-candy-sofa-280-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">ペット対応</p>
+    <h3>ラグジュアリー キャンディソファ 280</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥389,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luna-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luna-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ルナ ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥196,900〜</p>
+  </div>
+</a>
+
+
+<a href="product.html?product=silas-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/silas-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>シラス ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥141,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=claz-sintered-stone-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/claz-sintered-stone-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>クラズ シンタードストーンダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥130,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=elegant-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/elegant-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>エレガント ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥141,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=double-v-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/double-v-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ダブルV ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥163,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=curve-pedestal-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/curve-pedestal-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>カーブペデスタル ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥163,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=pandora-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/pandora-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>パンドラ ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥141,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxury-round-dining-set-120" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxury-round-dining-set-120-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ラグジュアリー ラウンドダイニングセット 120</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥218,900</p>
+  </div>
+</a>
+
+<a href="product.html?product=butterfly-ceramic-dining-set-160" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/butterfly-ceramic-dining-set-160-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>バタフライ セラミックダイニングセット 160</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥284,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=gold-cage-round-dining-set" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/gold-cage-round-dining-set-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ゴールドケージ ラウンドダイニングセット</h3>
+    <p class="product-type">ダイニングセット</p>
+    <p class="product-price">¥163,900〜</p>
+  </div>
+</a>
+<a href="product.html?product=luxo-curve-sofa" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxo-curve-sofa-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ルクソ カーブソファ</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥196,900〜</p>
+  </div>
+</a>
+<a href="product.html?product=luxury-modern-curve-sofa-140" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxury-modern-curve-sofa-140-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ラグジュアリー モダン カーブソファ 140</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥262,900〜</p>
+  </div>
+</a>
+<a href="product.html?product=victoria-sofa-200" class="shop-product-card">
+  <div
+    class="shop-product-image"
+    style="background-image: url('images/placeholders/victoria-sofa-200-1.jpg');"
+  ></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ヴィクトリア ソファ 200</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥251,900〜</p>
+  </div>
+</a>
+<a href="product.html?product=stylish-sofa-210" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/stylish-sofa-210-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 210</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥196,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=stylish-sofa-300" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/stylish-sofa-300-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 300</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥196,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=veronda-modern-luxury-sofa" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/veronda-modern-luxury-sofa-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ヴェロンダ モダンラグジュアリーソファ</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥218,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa300" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa300-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>バブルソファ クラウドソファ</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥262,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa200" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa200-cloud-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>バブルソファ クラウドソファ 200</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥284,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa150l" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa150l-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>コンパクト 3人掛けソファ 150cm レザー</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥185,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa210b" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa210b-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>ブークレ素材 210cm カーブソファ</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥185,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa115" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa115-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>クラウドスタイル セクショナルソファ</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥196,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa300-stylish" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa300-stylish-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 300</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥262,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa300a" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa300a-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 300A</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥219,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa240a" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa240a-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 240A</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥239,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa240b" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa240b-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 240B</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥209,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=luxesofa240a" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/luxesofa240a-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 240A</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥239,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=stylish-sofa-140-95-63" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/stylish-sofa-140-95-63-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュソファ 140</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥185,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=stylish-curve-luxo-living-sofa-120" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/stylish-curve-luxo-living-sofa-120-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">新作</p>
+    <h3>スタイリッシュ カーブ ルクソ リビングルームソファ</h3>
+    <p class="product-type">ソファ</p>
+    <p class="product-price">¥229,900〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=pocket-coil-mattress-25cm" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/pocket-coil-mattress-25cm-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">ホテル仕様</p>
+    <h3>25cm厚 ピロートップ ポケットコイルマットレス</h3>
+    <p class="product-type">マットレス</p>
+    <p class="product-price">¥59,000〜</p>
+  </div>
+</a>
+
+<a href="product.html?product=latex-mattress-25cm" class="shop-product-card">
+  <div class="shop-product-image" style="background-image: url('images/placeholders/latex-mattress-25cm-1.jpg');"></div>
+  <div class="shop-product-info">
+    <p class="product-badge">高級仕様</p>
+    <h3>25cm厚 ピロートップ 天然ラテックスマットレス</h3>
+    <p class="product-type">マットレス</p>
+    <p class="product-price">¥89,000〜</p>
+  </div>
+</a>
+          <a href="product.html?product=modern-luxury-leather-bed-frame" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/modern-luxury-leather-bed-frame-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">2色展開</p>
+              <h3>モダン ラグジュアリーレザーベッドフレーム</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥174,900〜</p>
+            </div>
+          </a>
+
+          <a href="product.html?product=modern-luxury-bed-frame-160" class="shop-product-card">
+            <div class="shop-product-image" style="background-image: url('images/placeholders/modern-luxury-bed-frame-160-1.jpg');"></div>
+            <div class="shop-product-info">
+              <p class="product-badge">新作</p>
+              <h3>モダン ラグジュアリーベッドフレーム</h3>
+              <p class="product-type">ベッド</p>
+              <p class="product-price">¥108,900〜</p>
             </div>
           </a>
 
@@ -237,6 +773,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="legal-notice.html">特定商取引法に基づく表記</a></li>
         </ul>
       </div>
 
