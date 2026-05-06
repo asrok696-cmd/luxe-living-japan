@@ -428,248 +428,249 @@ const PRODUCTS = {
   },
 
   "luxury-modern-curve-sofa-140": {
-  name: "ラグジュアリー モダン カーブソファ 140",
-  price: 262900,
-  image: `${BASE_URL}/images/placeholders/luxury-modern-curve-sofa-140-1.jpg`,
-  sizePrices: {
-    "140cm": 262900,
-    "180cm": 306900,
-    "200cm": 328900,
-    "220cm": 361900,
-    "240cm": 383900,
-    "280cm": 416900,
-    "300cm": 438900,
-    "340cm": 482900
-  }
-},
-"victoria-sofa-200": {
-  name: "ヴィクトリア ソファ 200",
-  price: 251900,
-  image: `${BASE_URL}/images/placeholders/victoria-sofa-200-1.jpg`,
-  sizePrices: {
-    "200cm": 251900,
-    "240cm": 295900,
-    "280cm": 328900,
-    "300cm": 350900
-  }
-},
+    name: "ラグジュアリー モダン カーブソファ 140",
+    price: 262900,
+    image: `${BASE_URL}/images/placeholders/luxury-modern-curve-sofa-140-1.jpg`,
+    sizePrices: {
+      "140cm": 262900,
+      "180cm": 306900,
+      "200cm": 328900,
+      "220cm": 361900,
+      "240cm": 383900,
+      "280cm": 416900,
+      "300cm": 438900,
+      "340cm": 482900
+    }
+  },
 
-"stylish-sofa-210": {
-  name: "スタイリッシュソファ 210",
-  price: 196900,
-  image: `${BASE_URL}/images/placeholders/stylish-sofa-210-1.jpg`,
-  sizePrices: {
-    "180cm": 196900,
-    "210cm": 240900,
-    "240cm": 273900,
-    "280cm": 306900,
-    "300cm": 328900
-  }
-},
+  "victoria-sofa-200": {
+    name: "ヴィクトリア ソファ 200",
+    price: 251900,
+    image: `${BASE_URL}/images/placeholders/victoria-sofa-200-1.jpg`,
+    sizePrices: {
+      "200cm": 251900,
+      "240cm": 295900,
+      "280cm": 328900,
+      "300cm": 350900
+    }
+  },
 
-"stylish-sofa-300": {
-  name: "スタイリッシュソファ 300",
-  price: 196900,
-  image: `${BASE_URL}/images/placeholders/stylish-sofa-300-1.jpg`,
-  sizePrices: {
-    "180cm": 196900,
-    "210cm": 218900,
-    "240cm": 262900,
-    "280cm": 306900,
-    "300cm": 350900
-  }
-},
+  "stylish-sofa-210": {
+    name: "スタイリッシュソファ 210",
+    price: 196900,
+    image: `${BASE_URL}/images/placeholders/stylish-sofa-210-1.jpg`,
+    sizePrices: {
+      "180cm": 196900,
+      "210cm": 240900,
+      "240cm": 273900,
+      "280cm": 306900,
+      "300cm": 328900
+    }
+  },
 
-"veronda-modern-luxury-sofa": {
-  name: "ヴェロンダ モダンラグジュアリーソファ",
-  price: 218900,
-  image: `${BASE_URL}/images/placeholders/veronda-modern-luxury-sofa-1.jpg`,
-  sizePrices: {
-    "200cm": 218900,
-    "240cm": 262900,
-    "300cm": 306900
-  }
-},
+  "stylish-sofa-300": {
+    name: "スタイリッシュソファ 300",
+    price: 196900,
+    image: `${BASE_URL}/images/placeholders/stylish-sofa-300-1.jpg`,
+    sizePrices: {
+      "180cm": 196900,
+      "210cm": 218900,
+      "240cm": 262900,
+      "280cm": 306900,
+      "300cm": 350900
+    }
+  },
 
-"luxesofa300": {
-  name: "バブルソファ クラウドソファ",
-  price: 262900,
-  image: `${BASE_URL}/images/placeholders/luxesofa300-1.jpg`,
-  sizePrices: {
-    "180cm": 262900,
-    "210cm": 284900,
-    "240cm": 339900,
-    "280cm": 372900,
-    "300cm": 405900
-  }
-},
+  "veronda-modern-luxury-sofa": {
+    name: "ヴェロンダ モダンラグジュアリーソファ",
+    price: 218900,
+    image: `${BASE_URL}/images/placeholders/veronda-modern-luxury-sofa-1.jpg`,
+    sizePrices: {
+      "200cm": 218900,
+      "240cm": 262900,
+      "300cm": 306900
+    }
+  },
 
-"luxesofa200": {
-  name: "バブルソファ クラウドソファ 200",
-  price: 284900,
-  image: `${BASE_URL}/images/placeholders/luxesofa200-cloud-1.jpg`,
-  sizePrices: {
-    "210cm": 284900,
-    "250cm": 339900,
-    "280cm": 372900
-  }
-},
+  "luxesofa300": {
+    name: "バブルソファ クラウドソファ",
+    price: 262900,
+    image: `${BASE_URL}/images/placeholders/luxesofa300-1.jpg`,
+    sizePrices: {
+      "180cm": 262900,
+      "210cm": 284900,
+      "240cm": 339900,
+      "280cm": 372900,
+      "300cm": 405900
+    }
+  },
 
-"luxesofa150l": {
-  name: "コンパクト 3人掛けソファ 150cm レザー",
-  price: 185900,
-  image: `${BASE_URL}/images/placeholders/luxesofa150l-1.jpg`,
-  sizePrices: {
-    "150cm": 185900,
-    "180cm": 207900,
-    "210cm": 229900,
-    "250cm": 262900,
-    "280cm": 295900,
-    "310cm": 317900
-  }
-},
+  "luxesofa200": {
+    name: "バブルソファ クラウドソファ 200",
+    price: 284900,
+    image: `${BASE_URL}/images/placeholders/luxesofa200-cloud-1.jpg`,
+    sizePrices: {
+      "210cm": 284900,
+      "250cm": 339900,
+      "280cm": 372900
+    }
+  },
 
-"luxesofa210b": {
-  name: "ブークレ素材 210cm カーブソファ",
-  price: 185900,
-  image: `${BASE_URL}/images/placeholders/luxesofa210b-1.jpg`,
-  sizePrices: {
-    "170cm": 185900,
-    "210cm": 218900,
-    "240cm": 240900,
-    "280cm": 273900,
-    "300cm": 295900
-  }
-},
+  "luxesofa150l": {
+    name: "コンパクト 3人掛けソファ 150cm レザー",
+    price: 185900,
+    image: `${BASE_URL}/images/placeholders/luxesofa150l-1.jpg`,
+    sizePrices: {
+      "150cm": 185900,
+      "180cm": 207900,
+      "210cm": 229900,
+      "250cm": 262900,
+      "280cm": 295900,
+      "310cm": 317900
+    }
+  },
 
-"luxesofa115": {
-  name: "クラウドスタイル セクショナルソファ",
-  price: 196900,
-  image: `${BASE_URL}/images/placeholders/luxesofa115-1.jpg`,
-  sizePrices: {
-    "115cm": 196900,
-    "130cm": 218900,
-    "220cm": 394900,
-    "240cm": 438900,
-    "280cm": 493900,
-    "300cm": 548900
-  }
-},
+  "luxesofa210b": {
+    name: "ブークレ素材 210cm カーブソファ",
+    price: 185900,
+    image: `${BASE_URL}/images/placeholders/luxesofa210b-1.jpg`,
+    sizePrices: {
+      "170cm": 185900,
+      "210cm": 218900,
+      "240cm": 240900,
+      "280cm": 273900,
+      "300cm": 295900
+    }
+  },
 
-"luxesofa300-stylish": {
-  name: "スタイリッシュソファ 300",
-  price: 339900,
-  image: `${BASE_URL}/images/placeholders/luxesofa300-stylish-1.jpg`,
-  sizePrices: {
-    "220cm": 262900,
-    "240cm": 284900,
-    "280cm": 306900,
-    "300cm": 339900
-  }
-},
+  "luxesofa115": {
+    name: "クラウドスタイル セクショナルソファ",
+    price: 196900,
+    image: `${BASE_URL}/images/placeholders/luxesofa115-1.jpg`,
+    sizePrices: {
+      "115cm": 196900,
+      "130cm": 218900,
+      "220cm": 394900,
+      "240cm": 438900,
+      "280cm": 493900,
+      "300cm": 548900
+    }
+  },
 
-"luxesofa300a": {
-  name: "スタイリッシュソファ 300A",
-  price: 306900,
-  image: `${BASE_URL}/images/placeholders/luxesofa300a-1.jpg`,
-  sizePrices: {
-    "220cm": 219000,
-    "240cm": 239000,
-    "280cm": 259000,
-    "300cm": 279000
-  }
-},
+  "luxesofa300-stylish": {
+    name: "スタイリッシュソファ 300",
+    price: 339900,
+    image: `${BASE_URL}/images/placeholders/luxesofa300-stylish-1.jpg`,
+    sizePrices: {
+      "220cm": 262900,
+      "240cm": 284900,
+      "280cm": 306900,
+      "300cm": 339900
+    }
+  },
 
-"luxesofa240a": {
-  name: "スタイリッシュソファ 240A",
-  price: 284900,
-  image: `${BASE_URL}/images/placeholders/luxesofa240a-1.jpg`,
-  sizePrices: {
-    "220cm": 239000,
-    "240cm": 259000,
-    "280cm": 279000,
-    "300cm": 299000
-  }
-},
+  "luxesofa300a": {
+    name: "スタイリッシュソファ 300A",
+    price: 306900,
+    image: `${BASE_URL}/images/placeholders/luxesofa300a-1.jpg`,
+    sizePrices: {
+      "220cm": 219000,
+      "240cm": 239000,
+      "280cm": 259000,
+      "300cm": 279000
+    }
+  },
 
+  "luxesofa240a": {
+    name: "スタイリッシュソファ 240A",
+    price: 284900,
+    image: `${BASE_URL}/images/placeholders/luxesofa240a-1.jpg`,
+    sizePrices: {
+      "220cm": 239000,
+      "240cm": 259000,
+      "280cm": 279000,
+      "300cm": 299000
+    }
+  },
 
-"luxesofa240b": {
-  name: "スタイリッシュソファ 240B",
-  price: 251900,
-  image: `${BASE_URL}/images/placeholders/luxesofa240b-1.jpg`,
-  sizePrices: {
-    "220cm": 209000,
-    "240cm": 229000,
-    "280cm": 249000,
-    "300cm": 269000
-  }
-},
+  "luxesofa240b": {
+    name: "スタイリッシュソファ 240B",
+    price: 251900,
+    image: `${BASE_URL}/images/placeholders/luxesofa240b-1.jpg`,
+    sizePrices: {
+      "220cm": 209000,
+      "240cm": 229000,
+      "280cm": 249000,
+      "300cm": 269000
+    }
+  },
 
-"stylish-sofa-240-105-80": {
-  name: "スタイリッシュソファ 240",
-  price: 295900,
-  image: `${BASE_URL}/images/placeholders/stylish-sofa-240-105-80-1.jpg`,
-  sizePrices: {
-    "210cm": 295900,
-    "240cm": 295900,
-    "280cm": 317900,
-    "300cm": 339900
-  }
-},
+  "stylish-sofa-240-105-80": {
+    name: "スタイリッシュソファ 240",
+    price: 295900,
+    image: `${BASE_URL}/images/placeholders/stylish-sofa-240-105-80-1.jpg`,
+    sizePrices: {
+      "210cm": 295900,
+      "240cm": 295900,
+      "280cm": 317900,
+      "300cm": 339900
+    }
+  },
 
-"stylish-sofa-140-95-63": {
-  name: "スタイリッシュソファ 140",
-  price: 185900,
-  image: `${BASE_URL}/images/placeholders/stylish-sofa-140-95-63-1.jpg`,
-  sizePrices: {
-    "140cm": 185900,
-    "180cm": 218900,
-    "220cm": 240900,
-    "240cm": 273900,
-    "280cm": 306900,
-    "300cm": 328900
-  }
-},
+  "stylish-sofa-140-95-63": {
+    name: "スタイリッシュソファ 140",
+    price: 185900,
+    image: `${BASE_URL}/images/placeholders/stylish-sofa-140-95-63-1.jpg`,
+    sizePrices: {
+      "140cm": 185900,
+      "180cm": 218900,
+      "220cm": 240900,
+      "240cm": 273900,
+      "280cm": 306900,
+      "300cm": 328900
+    }
+  },
 
-"stylish-curve-luxo-living-sofa-120": {
-  name: "スタイリッシュ カーブ ルクソ リビングルームソファ",
-  price: 229900,
-  image: `${BASE_URL}/images/placeholders/stylish-curve-luxo-living-sofa-120-1.jpg`,
-  sizePrices: {
-    "120cm": 229900,
-    "190cm": 306900,
-    "220cm": 328900,
-    "250cm": 361900,
-    "280cm": 394900,
-    "310cm": 416900
-  }
-},
+  "stylish-curve-luxo-living-sofa-120": {
+    name: "スタイリッシュ カーブ ルクソ リビングルームソファ",
+    price: 229900,
+    image: `${BASE_URL}/images/placeholders/stylish-curve-luxo-living-sofa-120-1.jpg`,
+    sizePrices: {
+      "120cm": 229900,
+      "190cm": 306900,
+      "220cm": 328900,
+      "250cm": 361900,
+      "280cm": 394900,
+      "310cm": 416900
+    }
+  },
 
-"pocket-coil-mattress-25cm": {
-  name: "25cm厚 ピロートップ ポケットコイルマットレス",
-  price: 59000,
-  image: `${BASE_URL}/images/placeholders/pocket-coil-mattress-25cm-1.jpg`,
-  sizePrices: {
-    "Single": 59000,
-    "SD": 69000,
-    "D": 79000,
-    "Q": 89000,
-    "King": 99000
-  }
-},
+  "pocket-coil-mattress-25cm": {
+    name: "25cm厚 ピロートップ ポケットコイルマットレス",
+    price: 59000,
+    image: `${BASE_URL}/images/placeholders/pocket-coil-mattress-25cm-1.jpg`,
+    sizePrices: {
+      "Single": 59000,
+      "SD": 69000,
+      "D": 79000,
+      "Q": 89000,
+      "King": 99000
+    }
+  },
 
-"latex-mattress-25cm": {
-  name: "25cm厚 ピロートップ 天然ラテックスマットレス",
-  price: 89000,
-  image: `${BASE_URL}/images/placeholders/latex-mattress-25cm-1.jpg`,
-  sizePrices: {
-    "Single": 89000,
-    "SD": 99000,
-    "D": 109000,
-    "Q": 119000,
-    "King": 129000
-  }
-},
+  "latex-mattress-25cm": {
+    name: "25cm厚 ピロートップ 天然ラテックスマットレス",
+    price: 89000,
+    image: `${BASE_URL}/images/placeholders/latex-mattress-25cm-1.jpg`,
+    sizePrices: {
+      "Single": 89000,
+      "SD": 99000,
+      "D": 109000,
+      "Q": 119000,
+      "King": 129000
+    }
+  },
+
   "gold-cage-round-dining-set": {
     name: "ゴールドケージ ラウンドダイニングセット",
     price: 163900,
@@ -713,8 +714,6 @@ const PRODUCTS = {
   }
 };
 
-app.use(express.static(path.join(__dirname, "public")));
-
 app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   const sig = req.headers["stripe-signature"];
 
@@ -740,14 +739,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
     const session = event.data.object;
     console.log("支払い完了:", session.id);
     console.log("購入者メール:", session.customer_details?.email || "no email");
-    console.log("商品ID:", session.metadata?.productId || "");
-    console.log("カラー:", session.metadata?.selectedColor || "");
-    console.log("サイズ:", session.metadata?.selectedSize || "");
-    console.log("収納:", session.metadata?.selectedStorage || "なし");
-    console.log("椅子:", session.metadata?.selectedChair || "なし");
-    console.log("商品本体価格:", session.metadata?.basePrice || "0");
-    console.log("マットレス:", session.metadata?.selectedMattress || "なし");
-    console.log("マットレス料金:", session.metadata?.mattressPrice || "0");
+    console.log("cartItemCount:", session.metadata?.cartItemCount || "0");
   }
 
   res.json({ received: true });
@@ -800,15 +792,10 @@ function buildProductDisplayName(
 ) {
   const suffixes = [];
 
-  if (selectedSize) {
-    suffixes.push(selectedSize);
-  }
+  if (selectedSize) suffixes.push(selectedSize);
+  if (selectedColor) suffixes.push(selectedColor);
 
-  if (selectedColor) {
-    suffixes.push(selectedColor);
-  }
-
-  if (selectedStorage && productId === "natural-storage-bed-frame-140") {
+  if (selectedStorage && product.storagePrices) {
     suffixes.push(selectedStorage);
   }
 
@@ -822,54 +809,62 @@ function buildProductDisplayName(
 
 app.post("/create-checkout-session", async (req, res) => {
   try {
-    const {
-      productId,
-      quantity = 1,
-      selectedColor = "",
-      selectedSize = "",
-      selectedStorage = "",
-      selectedChair = "",
-      selectedMattress = "",
-      mattressPrice = 0
-    } = req.body;
+    const { cartItems } = req.body;
 
-    const product = PRODUCTS[productId];
-
-    if (!product) {
-      return res.status(400).json({ error: "Invalid productId" });
+    if (!Array.isArray(cartItems) || cartItems.length === 0) {
+      return res.status(400).json({ error: "cartItems is required" });
     }
 
-    const safeQuantity = Math.max(1, Number(quantity) || 1);
-    const safeMattressPrice = Math.max(0, Number(mattressPrice) || 0);
+    const lineItems = [];
 
-    const basePrice = getProductBasePrice(
-      productId,
-      selectedSize,
-      selectedStorage,
-      selectedChair
-    );
+    for (const item of cartItems) {
+      const {
+        id: productId,
+        quantity = 1,
+        color: selectedColor = "",
+        size: selectedSize = "",
+        storageType: selectedStorage = "",
+        chairType: selectedChair = "",
+        mattressType: selectedMattress = "",
+        mattressPrice = 0
+      } = item;
 
-    if (basePrice === null) {
-      return res.status(400).json({ error: "Invalid pricing data" });
-    }
+      const product = PRODUCTS[productId];
 
-    const productDisplayName = buildProductDisplayName(
-      product,
-      productId,
-      selectedSize,
-      selectedStorage,
-      selectedChair,
-      selectedColor
-    );
+      if (!product) {
+        return res.status(400).json({ error: `Invalid productId: ${productId}` });
+      }
 
-    const lineItems = [
-      {
+      const safeQuantity = Math.max(1, Number(quantity) || 1);
+      const safeMattressPrice = Math.max(0, Number(mattressPrice) || 0);
+
+      const basePrice = getProductBasePrice(
+        productId,
+        selectedSize,
+        selectedStorage,
+        selectedChair
+      );
+
+      if (basePrice === null) {
+        return res.status(400).json({ error: `Invalid pricing data for ${productId}` });
+      }
+
+      const productDisplayName = buildProductDisplayName(
+        product,
+        productId,
+        selectedSize,
+        selectedStorage,
+        selectedChair,
+        selectedColor
+      );
+
+      lineItems.push({
         quantity: safeQuantity,
         price_data: {
           currency: "jpy",
           product_data: {
             name: productDisplayName,
-            images: [product.image],
+            images: product.image ? [product.image] : [],
             metadata: {
               productId,
               selectedColor,
@@ -880,28 +875,28 @@ app.post("/create-checkout-session", async (req, res) => {
           },
           unit_amount: basePrice
         }
-      }
-    ];
-
-    if (selectedMattress && safeMattressPrice > 0) {
-      lineItems.push({
-        quantity: safeQuantity,
-        price_data: {
-          currency: "jpy",
-          product_data: {
-            name: `${productDisplayName}用マットレス`,
-            metadata: {
-              productId,
-              selectedColor,
-              selectedSize,
-              selectedStorage,
-              selectedChair,
-              selectedMattress
-            }
-          },
-          unit_amount: safeMattressPrice
-        }
       });
+
+      if (selectedMattress && safeMattressPrice > 0) {
+        lineItems.push({
+          quantity: safeQuantity,
+          price_data: {
+            currency: "jpy",
+            product_data: {
+              name: `${productDisplayName}用マットレス`,
+              metadata: {
+                productId,
+                selectedColor,
+                selectedSize,
+                selectedStorage,
+                selectedChair,
+                selectedMattress
+              }
+            },
+            unit_amount: safeMattressPrice
+          }
+        });
+      }
     }
 
     const session = await stripe.checkout.sessions.create({
@@ -940,14 +935,7 @@ app.post("/create-checkout-session", async (req, res) => {
       success_url: `${BASE_URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${BASE_URL}/cancel.html`,
       metadata: {
-        productId,
-        selectedColor,
-        selectedSize,
-        selectedStorage,
-        selectedChair,
-        basePrice: String(basePrice),
-        selectedMattress,
-        mattressPrice: String(safeMattressPrice)
+        cartItemCount: String(cartItems.length)
       }
     });
 
@@ -975,6 +963,47 @@ app.get("/checkout-session", async (req, res) => {
     console.error("Failed to retrieve session:", error);
     res.status(500).json({ error: "Failed to retrieve session" });
   }
+});
+
+/* =========================
+   ここが重要
+   /products/... を product.html に流す
+========================= */
+
+app.get("/products/:category/:slug", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "product.html"));
+});
+
+/* 静的ファイル配信はその後 */
+app.use(express.static(path.join(__dirname, "public")));
+
+/* 主要ページの直アクセスも念のため */
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/shop", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "shop.html"));
+});
+
+app.get("/cart", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "cart.html"));
+});
+
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "about.html"));
+});
+
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "contact.html"));
+});
+
+app.get("/success", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "success.html"));
+});
+
+app.get("/cancel", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "cancel.html"));
 });
 
 app.listen(PORT, () => {

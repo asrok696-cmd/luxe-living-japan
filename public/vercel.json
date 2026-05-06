@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/products/:category/:slug",
+      "destination": "/product.html"
+    },
+    {
+      "source": "/shop/:category",
+      "destination": "/shop.html"
+    }
+  ]
+}
