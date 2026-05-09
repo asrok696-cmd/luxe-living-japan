@@ -784,7 +784,6 @@ function getProductBasePrice(productId, selectedSize, selectedStorage, selectedC
 
 function buildProductDisplayName(
   product,
-  productId,
   selectedSize,
   selectedStorage,
   selectedChair,
@@ -809,7 +808,7 @@ function buildProductDisplayName(
 
 app.post("/create-checkout-session", async (req, res) => {
   try {
-    const { cartItems } = req.body;
+    const cartItems = req.body.cartItems || req.body.items;
 
     if (!Array.isArray(cartItems) || cartItems.length === 0) {
       return res.status(400).json({ error: "cartItems is required" });
@@ -818,44 +817,42 @@ app.post("/create-checkout-session", async (req, res) => {
     const lineItems = [];
 
     for (const item of cartItems) {
-      const {
-        id: productId,
-        quantity = 1,
-        color: selectedColor = "",
-        size: selectedSize = "",
-        storageType: selectedStorage = "",
-        chairType: selectedChair = "",
-        mattressType: selectedMattress = "",
-        mattressPrice = 0
-      } = item;
+      const finalProductId = item.id || item.productId || "";
+      const finalColor = item.color || item.selectedColor || "";
+      const finalSize = item.size || item.selectedSize || "";
+      const finalStorage = item.storageType || item.selectedStorage || "";
+      const finalChair = item.chairType || item.selectedChair || "";
+      const finalMattress = item.mattressType || item.selectedMattress || "";
+      const safeQuantity = Math.max(1, Number(item.quantity) || 1);
+      const safeMattressPrice = Math.max(0, Number(item.mattressPrice) || 0);
 
-      const product = PRODUCTS[productId];
+      const product = PRODUCTS[finalProductId];
 
       if (!product) {
-        return res.status(400).json({ error: `Invalid productId: ${productId}` });
+        return res.status(400).json({
+          error: `Invalid productId: ${finalProductId}`
+        });
       }
 
-      const safeQuantity = Math.max(1, Number(quantity) || 1);
-      const safeMattressPrice = Math.max(0, Number(mattressPrice) || 0);
-
       const basePrice = getProductBasePrice(
-        productId,
-        selectedSize,
-        selectedStorage,
-        selectedChair
+        finalProductId,
+        finalSize,
+        finalStorage,
+        finalChair
       );
 
       if (basePrice === null) {
-        return res.status(400).json({ error: `Invalid pricing data for ${productId}` });
+        return res.status(400).json({
+          error: `Invalid pricing data for ${finalProductId}`
+        });
       }
 
       const productDisplayName = buildProductDisplayName(
         product,
-        productId,
-        selectedSize,
-        selectedStorage,
-        selectedChair,
-        selectedColor
+        finalSize,
+        finalStorage,
+        finalChair,
+        finalColor
       );
 
       lineItems.push({
@@ -866,18 +863,18 @@ app.post("/create-checkout-session", async (req, res) => {
             name: productDisplayName,
             images: product.image ? [product.image] : [],
             metadata: {
-              productId,
-              selectedColor,
-              selectedSize,
-              selectedStorage,
-              selectedChair
+              productId: finalProductId,
+              selectedColor: finalColor,
+              selectedSize: finalSize,
+              selectedStorage: finalStorage,
+              selectedChair: finalChair
             }
           },
           unit_amount: basePrice
         }
       });
 
-      if (selectedMattress && safeMattressPrice > 0) {
+      if (finalMattress && safeMattressPrice > 0) {
         lineItems.push({
           quantity: safeQuantity,
           price_data: {
@@ -885,12 +882,12 @@ app.post("/create-checkout-session", async (req, res) => {
             product_data: {
               name: `${productDisplayName}用マットレス`,
               metadata: {
-                productId,
-                selectedColor,
-                selectedSize,
-                selectedStorage,
-                selectedChair,
-                selectedMattress
+                productId: finalProductId,
+                selectedColor: finalColor,
+                selectedSize: finalSize,
+                selectedStorage: finalStorage,
+                selectedChair: finalChair,
+                selectedMattress: finalMattress
               }
             },
             unit_amount: safeMattressPrice
@@ -965,19 +962,12 @@ app.get("/checkout-session", async (req, res) => {
   }
 });
 
-/* =========================
-   ここが重要
-   /products/... を product.html に流す
-========================= */
-
 app.get("/products/:category/:slug", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "product.html"));
 });
 
-/* 静的ファイル配信はその後 */
 app.use(express.static(path.join(__dirname, "public")));
 
-/* 主要ページの直アクセスも念のため */
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
