@@ -17,11 +17,11 @@ const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
 const PORT = process.env.PORT || 3000;
 
 const PRODUCTS = {
-  "luna-lounge-sofa-150": {
-    name: "ルーナ ラウンジソファ 150 ホワイト",
-    price: 196900,
-    image: `${BASE_URL}/images/placeholders/luna-lounge-sofa-150-1.jpg`
-  },
+ "luna-lounge-sofa-150-white": {
+  name: "ルーナ ラウンジソファ 150 ホワイト",
+  price: 196900,
+  image: `${BASE_URL}/images/placeholders/luna-lounge-sofa-150-1.jpg`
+},
 
   "bubble-sofa-270": {
     name: "バブルソファー 270 ベージュ",
