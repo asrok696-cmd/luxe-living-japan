@@ -5926,6 +5926,44 @@ function updateProductPrice(product, selectedSize) {
 
 function renderDynamicProductPage() {
   const productKey = getProductKeyFromUrl();
+  const absoluteProductUrl = product.canonicalPath
+  ? `https://luxelivingjp.com${product.canonicalPath}`
+  : window.location.href;
+
+const absoluteProductImage =
+  Array.isArray(product.images) && product.images[0]
+    ? `https://luxelivingjp.com${product.images[0]}`
+    : "https://luxelivingjp.com/images/logo.jpg";
+
+const canonicalLink = document.getElementById("canonicalLink");
+const ogUrl = document.getElementById("ogUrl");
+const ogImage = document.getElementById("ogImage");
+const ogTitle = document.getElementById("ogTitle");
+const ogDescription = document.getElementById("ogDescription");
+const ogImageAlt = document.getElementById("ogImageAlt");
+const twitterTitle = document.getElementById("twitterTitle");
+const twitterDescription = document.getElementById("twitterDescription");
+const twitterImage = document.getElementById("twitterImage");
+
+if (canonicalLink) canonicalLink.href = absoluteProductUrl;
+if (ogUrl) ogUrl.content = absoluteProductUrl;
+if (ogImage) ogImage.content = absoluteProductImage;
+if (ogTitle) ogTitle.content = `${product.name} | Luxe Living Japan`;
+if (ogDescription) {
+  ogDescription.content =
+    product.seoDescription ||
+    product.description ||
+    "Luxe Living Japanの商品詳細ページです。";
+}
+if (ogImageAlt) ogImageAlt.content = product.name || "Luxe Living Japan";
+if (twitterTitle) twitterTitle.content = `${product.name} | Luxe Living Japan`;
+if (twitterDescription) {
+  twitterDescription.content =
+    product.seoDescription ||
+    product.description ||
+    "Luxe Living Japanの商品詳細ページです。";
+}
+if (twitterImage) twitterImage.content = absoluteProductImage;
 
   if (!productSummary || !productKey || !PRODUCT_DATA[productKey]) return;
 
