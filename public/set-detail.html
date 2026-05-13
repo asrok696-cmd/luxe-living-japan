@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>セット商品 | Luxe Living Japan</title>
+  <meta
+    name="description"
+    content="Luxe Living Japanのセット商品詳細ページ。ソファ・ベッド・ダイニングを組み合わせた空間コーディネートについてお問い合わせいただけます。"
+  />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .set-detail-page {
+      padding: 80px 0;
+    }
+
+    .set-detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .set-main-image img {
+      width: 100%;
+      border-radius: 24px;
+      display: block;
+    }
+
+    .set-title {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .set-price {
+      font-size: 28px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .set-description {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .set-contents {
+      margin-bottom: 40px;
+    }
+
+    .set-contents h2 {
+      margin-bottom: 16px;
+    }
+
+    .set-contents ul {
+      padding-left: 20px;
+      line-height: 2;
+    }
+
+    .set-contact-form {
+      padding: 32px;
+      border-radius: 24px;
+      background: #f8f8f8;
+    }
+
+    .set-contact-form h2 {
+      margin-bottom: 12px;
+    }
+
+    .set-contact-form > p {
+      margin-bottom: 24px;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .form-row {
+      margin-bottom: 18px;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #fff;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    .form-row textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px 32px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .set-detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="/index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="/images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="/shop.html" class="header-link desktop-only">商品</a>
+          <a href="/sets.html" class="header-link desktop-only">セット商品</a>
+          <a href="/about.html" class="header-link desktop-only">会社概要</a>
+          <a href="/contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="/cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/index.html">ホーム</a>
+      <a href="/shop.html">商品</a>
+      <a href="/sets.html">セット商品</a>
+      <a href="/about.html">会社概要</a>
+      <a href="/contact.html">お問い合わせ</a>
+      <a href="/legal-notice.html">特定商取引法に基づく表記</a>
+      <a href="/cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="set-detail-page">
+    <div class="container">
+      <div class="set-detail-grid">
+        <div class="set-main-image">
+          <img id="setImage" src="" alt="" />
+        </div>
+
+        <div>
+          <h1 class="set-title" id="setTitle"></h1>
+          <p class="set-price" id="setPrice"></p>
+          <p class="set-description" id="setDescription"></p>
+
+          <div class="set-contents">
+            <h2>セット内容</h2>
+            <ul id="setContents"></ul>
+          </div>
+
+          <form
+            class="set-contact-form"
+            action="https://formspree.io/f/mwvyyzoj"
+            method="POST"
+          >
+            <h2>このセットについて問い合わせる</h2>
+            <p>
+              サイズ変更・カラー変更・配送エリア・組み合わせ変更などをご希望の場合は、こちらからご相談ください。
+            </p>
+
+            <input type="hidden" name="希望セット" id="formSetName" />
+
+            <div class="form-row">
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="お名前" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="メールアドレス" required />
+            </div>
+
+            <div class="form-row">
+              <label for="phone">電話番号 任意</label>
+              <input type="tel" id="phone" name="電話番号" />
+            </div>
+
+            <div class="form-row">
+              <label for="plan">希望プラン</label>
+              <select id="plan" name="希望プラン">
+                <option value="Aプラン">Aプラン</option>
+                <option value="Bプラン">Bプラン</option>
+                <option value="相談したい">相談したい</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="area">配送先エリア</label>
+              <input type="text" id="area" name="配送先エリア" placeholder="例：東京都港区 / 福岡県福岡市" />
+            </div>
+
+            <div class="form-row">
+              <label for="budget">ご予算</label>
+              <input type="text" id="budget" name="ご予算" placeholder="例：50万円〜80万円" />
+            </div>
+
+            <div class="form-row">
+              <label for="message">ご相談内容</label>
+              <textarea
+                id="message"
+                name="ご相談内容"
+                placeholder="希望サイズ、カラー、搬入条件、組み合わせ変更などをご記入ください。"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              送信する
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/sets.html">Set Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/legal-notice.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@luxelivingjp.com">sales@luxelivingjp.com</a></li>
+          <li><a href="/contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const SET_DATA = {
+      "luxury-room-set-01": {
+        title: "ラグジュアリー ルームセット 01",
+        price: "¥649,000〜",
+        image: "/images/sets/luxury-room-set-01.jpg",
+        description:
+          "ソファ・ベッド・マットレス・ダイニングを統一感のあるデザインで組み合わせたラグジュアリーセットです。",
+        contents: [
+          "セットA：¥649,000",
+          "ソファ 1脚（293×99×75cm）",
+          "ベッドフレーム 1台（クイーン150cm）",
+          "マットレス 1枚（クイーン150cm）",
+          "ダイニング120cm + 4脚セット",
+          "セットB：¥749,000",
+          "ソファ 1脚（392×99×75cm）",
+          "ベッドフレーム 1台（キング180cm）",
+          "マットレス 1枚（キング180cm）",
+          "ダイニング130cm + 6脚セット"
+        ]
+      },
+
+      "luxury-room-set-02": {
+        title: "ラグジュアリー ルームセット 02",
+        price: "¥649,000〜",
+        image: "/images/sets/luxury-room-set-02.jpg",
+        description:
+          "ブラックを基調とした重厚感あるモダンインテリアセットです。リビング・ベッドルーム・ダイニングをまとめて整えたい方におすすめです。",
+        contents: [
+          "セットA：¥649,000",
+          "ソファ 1脚（246×185×85cm）",
+          "ベッドフレーム 1台（クイーン150cm）",
+          "マットレス 1枚（クイーン150cm）",
+          "ダイニング160cm + 4脚セット",
+          "セットB：¥799,000",
+          "ソファ 1脚（316×185×85cm）",
+          "ベッドフレーム 1台（キング180cm）",
+          "マットレス 1枚（キング180cm）",
+          "ダイニング180cm + 6脚セット"
+        ]
+      },
+
+      "luxury-room-set-03": {
+        title: "ラグジュアリー ルームセット 03",
+        price: "¥499,000〜",
+        image: "/images/sets/luxury-room-set-03.jpg",
+        description:
+          "柔らかいカラーで統一したナチュラルモダン空間セットです。明るく上品な雰囲気の部屋づくりに適しています。",
+        contents: [
+          "セットA：¥499,000",
+          "ソファ 1脚（260×85×80cm）",
+          "ベッドフレーム 1台（クイーン150cm）",
+          "マットレス 1枚（クイーン150cm）",
+          "ダイニング120cm + 4脚セット",
+          "セットB：¥599,000",
+          "ソファ 1脚（360×85×80cm）",
+          "ベッドフレーム 1台（キング180cm）",
+          "マットレス 1枚（キング180cm）",
+          "ダイニング150cm + 6脚セット"
+        ]
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const setKey = params.get("set");
+    const set = SET_DATA[setKey];
+
+    if (set) {
+      document.title = `${set.title} | Luxe Living Japan`;
+
+      document.getElementById("setTitle").textContent = set.title;
+      document.getElementById("setPrice").textContent = set.price;
+      document.getElementById("setDescription").textContent = set.description;
+      document.getElementById("formSetName").value = set.title;
+
+      const imageEl = document.getElementById("setImage");
+      imageEl.src = set.image;
+      imageEl.alt = set.title;
+
+      const contentsEl = document.getElementById("setContents");
+
+      set.contents.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        contentsEl.appendChild(li);
+      });
+    }
+  </script>
+
+  <script src="/script.js"></script>
+</body>
+</html>

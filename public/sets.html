@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>セット商品 | Luxe Living Japan</title>
+
+  <meta
+    name="description"
+    content="Luxe Living Japanの空間コーディネートセット一覧。ソファ・ベッド・ダイニングを組み合わせたラグジュアリーセットをご紹介します。"
+  />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .sets-page {
+      padding: 80px 0;
+    }
+
+    .sets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .set-card {
+      border-radius: 24px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .set-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .set-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .set-card-content {
+      padding: 24px;
+    }
+
+    .set-card h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .set-price {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .set-description {
+      color: #666;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="main-header">
+      <div class="container main-header-inner header-complete header-minimal">
+        <div class="header-left">
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="メニューを開く">☰</button>
+        </div>
+
+        <a href="/index.html" class="logo logo-image-wrap logo-shifted" aria-label="Luxe Living Japan ホーム">
+          <img src="/images/logo.jpg" alt="Luxe Living Japan" class="site-logo" />
+        </a>
+
+        <div class="header-right header-right-main">
+          <a href="/shop.html" class="header-link desktop-only">商品</a>
+          <a href="/sets.html" class="header-link desktop-only">セット商品</a>
+          <a href="/about.html" class="header-link desktop-only">会社概要</a>
+          <a href="/contact.html" class="header-link desktop-only">お問い合わせ</a>
+          <a href="/cart.html" class="header-link cart-link">カート (0)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/index.html">ホーム</a>
+      <a href="/shop.html">商品</a>
+      <a href="/sets.html">セット商品</a>
+      <a href="/about.html">会社概要</a>
+      <a href="/contact.html">お問い合わせ</a>
+      <a href="/legal-notice.html">特定商取引法に基づく表記</a>
+      <a href="/cart.html" class="cart-link">カート (0)</a>
+    </div>
+  </header>
+
+  <main class="sets-page">
+    <div class="container">
+      <p class="section-label">Coordinate Sets</p>
+      <h1 style="margin-bottom: 48px;">セット商品</h1>
+
+      <div class="sets-grid">
+        <a href="/set-detail.html?set=luxury-room-set-01" class="set-card">
+          <img src="/images/sets/luxury-room-set-01.jpg" alt="ラグジュアリー ルームセット 01" />
+          <div class="set-card-content">
+            <h2>ラグジュアリー ルームセット 01</h2>
+            <p class="set-price">¥649,000〜</p>
+            <p class="set-description">
+              ソファ・ベッド・ダイニングを統一感のあるデザインで組み合わせたラグジュアリーセット。
+            </p>
+          </div>
+        </a>
+
+        <a href="/set-detail.html?set=luxury-room-set-02" class="set-card">
+          <img src="/images/sets/luxury-room-set-02.jpg" alt="ラグジュアリー ルームセット 02" />
+          <div class="set-card-content">
+            <h2>ラグジュアリー ルームセット 02</h2>
+            <p class="set-price">¥649,000〜</p>
+            <p class="set-description">
+              ブラックを基調とした重厚感あるモダンインテリアセット。
+            </p>
+          </div>
+        </a>
+
+        <a href="/set-detail.html?set=luxury-room-set-03" class="set-card">
+          <img src="/images/sets/luxury-room-set-03.jpg" alt="ラグジュアリー ルームセット 03" />
+          <div class="set-card-content">
+            <h2>ラグジュアリー ルームセット 03</h2>
+            <p class="set-price">¥499,000〜</p>
+            <p class="set-description">
+              柔らかいカラーで統一したナチュラルモダン空間セット。
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Luxe Living Japan</h3>
+        <p>Modern furniture curated for elegant, calm, and timeless interiors.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/sets.html">Set Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/legal-notice.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@luxelivingjp.com">sales@luxelivingjp.com</a></li>
+          <li><a href="/contact.html">Contact Form</a></li>
+          <li><a href="#">Tokyo, Japan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Luxe Living Japan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
