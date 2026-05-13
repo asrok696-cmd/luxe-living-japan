@@ -5253,29 +5253,27 @@ function buildAbsoluteUrl(path = "") {
 
 function getProductKeyFromUrl() {
   const params = new URLSearchParams(window.location.search);
-  const queryKey = params.get("product");
+  const queryProduct = params.get("product");
 
-  if (queryKey && PRODUCT_DATA[queryKey]) {
-    return queryKey;
+  if (queryProduct && PRODUCT_DATA[queryProduct]) {
+    return queryProduct;
   }
 
   const currentPath = window.location.pathname;
+  const pathParts = currentPath.split("/").filter(Boolean);
+  const slug = pathParts[pathParts.length - 1];
 
-  const pathMatchedKey = Object.keys(PRODUCT_DATA).find((key) => {
-    return PRODUCT_DATA[key]?.canonicalPath === currentPath;
+  const matchedKey = Object.keys(PRODUCT_DATA).find((key) => {
+    const product = PRODUCT_DATA[key];
+
+    return (
+      key === slug ||
+      product.slug === slug ||
+      product.canonicalPath === currentPath
+    );
   });
 
-  if (pathMatchedKey) {
-    return pathMatchedKey;
-  }
-
-  const slug = currentPath.split("/").filter(Boolean).pop();
-
-  const slugMatchedKey = Object.keys(PRODUCT_DATA).find((key) => {
-    return PRODUCT_DATA[key]?.slug === slug;
-  });
-
-  return slugMatchedKey || "";
+  return matchedKey || "";
 }
 
 function upsertMetaTag(attrName, attrValue, content) {
