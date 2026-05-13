@@ -5923,24 +5923,6 @@ function updateProductPrice(product, selectedSize) {
 
   updateSeoForProduct(product, selectedSize, finalPrice);
 }
-function getProductKeyFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const queryProduct = params.get("product");
-
-  if (queryProduct && PRODUCT_DATA[queryProduct]) {
-    return queryProduct;
-  }
-
-  const pathParts = window.location.pathname.split("/").filter(Boolean);
-  const slug = pathParts[pathParts.length - 1];
-
-  const matchedKey = Object.keys(PRODUCT_DATA).find((key) => {
-    const product = PRODUCT_DATA[key];
-    return product.slug === slug || product.canonicalPath === window.location.pathname;
-  });
-
-  return matchedKey || "";
-}
 
 function renderDynamicProductPage() {
   const productKey = getProductKeyFromUrl();
@@ -6297,13 +6279,6 @@ if (filterLists.length > 0) {
     });
   });
 }
-
-if (clearCartButton) {
-  clearCartButton.addEventListener("click", () => {
-    clearCart();
-  });
-}
-
 if (checkoutButton) {
   checkoutButton.addEventListener("click", async () => {
     const cart = getCart();
@@ -6320,7 +6295,7 @@ if (checkoutButton) {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          items: cart.map(buildCheckoutPayloadFromCartItem)
+          cartItems: cart.map(buildCheckoutPayloadFromCartItem)
         })
       });
 
