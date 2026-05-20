@@ -24,89 +24,107 @@
   </script>
 
   <style>
-    .sets-page {
-      padding: 80px 0;
-    }
+  .sets-guide-section {
+  width: 100%;
+  max-width: 1320px;
+  margin: 120px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
 
-    .sets-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-    }
+.sets-guide-section > .sets-guide-grid,
+.sets-guide-section > .info-card {
+  margin-bottom: 40px;
+}
 
-    .set-card {
-      border-radius: 24px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      transition: 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
+.sets-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
 
-    .set-card:hover {
-      transform: translateY(-6px);
-    }
+.info-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 44px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+  box-sizing: border-box;
+}
 
-    .set-card img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
+.info-card h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
 
-    .set-card-content {
-      padding: 24px;
-    }
+.info-card h3 {
+  font-size: 28px;
+  line-height: 1.4;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
 
-    .set-card h2 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
+.info-card p,
+.info-card li {
+  font-size: 22px;
+  line-height: 2;
+  color: #555;
+}
 
-    .set-price {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+.info-card ol,
+.info-card ul {
+  padding-left: 24px;
+  margin-top: 12px;
+}
 
-    .set-description {
-      color: #666;
-      line-height: 1.7;
-    }
+.info-card a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
-    .sets-guide-section {
-      margin-bottom: 72px;
-    }
+@media (max-width: 1000px) {
+  .sets-guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-    .sets-guide-section > .sets-guide-grid,
-    .sets-guide-section > .info-card {
-      margin-bottom: 32px;
-    }
+@media (max-width: 800px) {
+  .sets-guide-section {
+    margin: 80px auto;
+    padding: 0 20px;
+  }
 
-    .sets-guide-section > .sets-guide-grid:last-child {
-      margin-bottom: 0;
-    }
+  .sets-guide-grid {
+    gap: 24px;
+  }
 
-    .sets-guide-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      margin-bottom: 32px;
-    }
+  .info-card {
+    padding: 28px;
+    border-radius: 22px;
+  }
 
-    .info-card {
-      background: #fff;
-      border-radius: 24px;
-      padding: 36px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
+  .info-card h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
 
-    @media (max-width: 800px) {
-      .sets-guide-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+  .info-card h3 {
+    font-size: 24px;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+}
+    
   </style>
 </head>
 
@@ -148,98 +166,6 @@
       <p class="section-label">Coordinate Sets</p>
       <h1 style="margin-bottom: 48px;">セット商品</h1>
 
-      <section class="sets-guide-section">
-  <div class="sets-guide-grid">
-    <div class="info-card">
-      <h2>ショールーム見学</h2>
-      <p>
-        香川県の倉庫にて実際の商品をご覧いただけます。2026年7月より、新幹線・国内線・ETC料金の交通費を最大2万円まで返金いたします。領収書をお持ちください。ご来店の際は事前にメールにてご予約ください。
-      </p>
-    </div>
-
-    <div class="info-card">
-      <h2>LINEビデオ通話</h2>
-      <p>
-        香川県へのご来店が難しいお客様には、LINEビデオ通話でご対応いたします。特定商品の動画や、複数アイテムのコーディネート動画もリクエストいただけます。在庫切れの場合も、類似デザインをご提案いたします。
-      </p>
-    </div>
-  </div>
-
-  <div class="info-card">
-    <h2>素材・カラー・サイズ</h2>
-
-    <h3>ソファ</h3>
-    <p>
-      素材：ファブリック・合成皮革・本革・ベルベット・ブークレ<br>
-      カラー：ベージュ・オフホワイト・グレー・チャコール・ブラック・ダークブラウン・グリーン・オレンジ等。カスタムカラーもご相談ください。<br>
-      サイズ：1人掛け100cmから最大766cm Lシェイプまで
-    </p>
-
-    <h3>ベッドフレーム</h3>
-    <p>
-      素材：ファブリック・合成皮革・本革・ベルベット・ブークレ<br>
-      カラー：ベージュ・オフホワイト・グレー・チャコール・ブラック・ダークブラウン等。その他はご相談ください。<br>
-      サイズ：スモールダブル・ダブル・クイーン・キング対応
-    </p>
-
-    <h3>ダイニングセット</h3>
-    <p>
-      テーブルトップ素材：焼結石・スーパークリスタルストーン・大理石・無垢材<br>
-      木材：パイン・アッシュ・ラバーウッド・オーク<br>
-      カラー：ホワイト・グレー・ブラック・ナチュラルウッド等。その他はご相談ください。<br>
-      丸テーブル：直径80cm〜150cm<br>
-      正方形・長方形テーブル：80cm〜300cm<br>
-      座席数：2人掛け〜8人掛け以上
-    </p>
-  </div>
-
-  <div class="sets-guide-grid">
-    <div class="info-card">
-      <h2>ご注文の流れ</h2>
-      <ol>
-        <li>ギャラリーで商品を選ぶ</li>
-        <li>素材・カラー・サイズをフォームまたはLINEで指定</li>
-        <li>お見積もり・在庫確認</li>
-        <li>全国送料無料・組立込みでお届け</li>
-      </ol>
-    </div>
-
-    <div class="info-card">
-      <h2>安心してお買い物いただける理由</h2>
-      <p>
-        直接ご購入いただくと、楽天市場より大幅にお得です。最大35%の手数料削減分をお客様に還元いたします。全国送料・組立無料。楽天ポイントや購入者保証をご希望の方は、楽天市場・メルカリ・ラクマからもご購入いただけます。
-      </p>
-    </div>
-
-    <div class="info-card">
-  <h2>お届けについて</h2>
-  <p>
-    在庫あり商品は全国3〜7営業日以内に発送いたします。離島・一部遠隔地・車両の進入が困難な場所・駐車スペースが確保できない場所については、追加日数・追加送料が発生する場合がございます。
-  </p>
-  <p>
-    全商品は組立設置が必要なため、配送時にはお客様ご本人または成人の方が必ずご在宅くださいますようお願いいたします。事前に必要なご準備をお願いいたします。
-  </p>
-  <p>
-    ご希望の配送日時については可能な限り対応いたしますが、ドライバーのルートおよび組立スタッフの状況により異なりますことをあらかじめご了承ください。
-  </p>
-  <p>
-    在庫切れ商品については、ご注文確定後20〜30営業日以内にお届けいたします。お急ぎの方はご注文前にお問い合わせください。
-  </p>
-</div>
-
-<div class="info-card">
-  <h2>他モールでのご購入</h2>
-  <p>
-    楽天ポイントや各プラットフォームの購入者保証をご希望のお客様は、以下の店舗ページからもご購入いただけます。
-  </p>
-  <ul>
-    <li><a href="https://www.rakuten.co.jp/oroshiuriya2goten/" target="_blank" rel="noopener">楽天市場店</a></li>
-    <li><a href="https://jp.mercari.com/user/profile/184226768" target="_blank" rel="noopener">メルカリ店</a></li>
-    <li><a href="https://fril.jp/shop/e6fecbf5068ea96b2cbaa8074747f546" target="_blank" rel="noopener">ラクマ店</a></li>
-  </ul>
-</div>
-
-  </div>
 </section>
 
       <div class="sets-grid">
@@ -775,7 +701,99 @@
         </a>
 
       </div>
+    </div> 
+     <section class="sets-guide-section">
+  <div class="sets-guide-grid">
+    <div class="info-card">
+      <h2>ショールーム見学</h2>
+      <p>
+        香川県の倉庫にて実際の商品をご覧いただけます。2026年7月より、新幹線・国内線・ETC料金の交通費を最大2万円まで返金いたします。領収書をお持ちください。ご来店の際は事前にメールにてご予約ください。
+      </p>
     </div>
+
+    <div class="info-card">
+      <h2>LINEビデオ通話</h2>
+      <p>
+        香川県へのご来店が難しいお客様には、LINEビデオ通話でご対応いたします。特定商品の動画や、複数アイテムのコーディネート動画もリクエストいただけます。在庫切れの場合も、類似デザインをご提案いたします。
+      </p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h2>素材・カラー・サイズ</h2>
+
+    <h3>ソファ</h3>
+    <p>
+      素材：ファブリック・合成皮革・本革・ベルベット・ブークレ<br>
+      カラー：ベージュ・オフホワイト・グレー・チャコール・ブラック・ダークブラウン・グリーン・オレンジ等。カスタムカラーもご相談ください。<br>
+      サイズ：1人掛け100cmから最大766cm Lシェイプまで
+    </p>
+
+    <h3>ベッドフレーム</h3>
+    <p>
+      素材：ファブリック・合成皮革・本革・ベルベット・ブークレ<br>
+      カラー：ベージュ・オフホワイト・グレー・チャコール・ブラック・ダークブラウン等。その他はご相談ください。<br>
+      サイズ：スモールダブル・ダブル・クイーン・キング対応
+    </p>
+
+    <h3>ダイニングセット</h3>
+    <p>
+      テーブルトップ素材：焼結石・スーパークリスタルストーン・大理石・無垢材<br>
+      木材：パイン・アッシュ・ラバーウッド・オーク<br>
+      カラー：ホワイト・グレー・ブラック・ナチュラルウッド等。その他はご相談ください。<br>
+      丸テーブル：直径80cm〜150cm<br>
+      正方形・長方形テーブル：80cm〜300cm<br>
+      座席数：2人掛け〜8人掛け以上
+    </p>
+  </div>
+
+  <div class="sets-guide-grid">
+    <div class="info-card">
+      <h2>ご注文の流れ</h2>
+      <ol>
+        <li>ギャラリーで商品を選ぶ</li>
+        <li>素材・カラー・サイズをフォームまたはLINEで指定</li>
+        <li>お見積もり・在庫確認</li>
+        <li>全国送料無料・組立込みでお届け</li>
+      </ol>
+    </div>
+
+    <div class="info-card">
+      <h2>安心してお買い物いただける理由</h2>
+      <p>
+        直接ご購入いただくと、楽天市場より大幅にお得です。最大35%の手数料削減分をお客様に還元いたします。全国送料・組立無料。楽天ポイントや購入者保証をご希望の方は、楽天市場・メルカリ・ラクマからもご購入いただけます。
+      </p>
+    </div>
+
+    <div class="info-card">
+  <h2>お届けについて</h2>
+  <p>
+    在庫あり商品は全国3〜7営業日以内に発送いたします。離島・一部遠隔地・車両の進入が困難な場所・駐車スペースが確保できない場所については、追加日数・追加送料が発生する場合がございます。
+  </p>
+  <p>
+    全商品は組立設置が必要なため、配送時にはお客様ご本人または成人の方が必ずご在宅くださいますようお願いいたします。事前に必要なご準備をお願いいたします。
+  </p>
+  <p>
+    ご希望の配送日時については可能な限り対応いたしますが、ドライバーのルートおよび組立スタッフの状況により異なりますことをあらかじめご了承ください。
+  </p>
+  <p>
+    在庫切れ商品については、ご注文確定後20〜30営業日以内にお届けいたします。お急ぎの方はご注文前にお問い合わせください。
+  </p>
+</div>
+
+<div class="info-card">
+  <h2>他モールでのご購入</h2>
+  <p>
+    楽天ポイントや各プラットフォームの購入者保証をご希望のお客様は、以下の店舗ページからもご購入いただけます。
+  </p>
+  <ul>
+    <li><a href="https://www.rakuten.co.jp/oroshiuriya2goten/" target="_blank" rel="noopener">楽天市場店</a></li>
+    <li><a href="https://jp.mercari.com/user/profile/184226768" target="_blank" rel="noopener">メルカリ店</a></li>
+    <li><a href="https://fril.jp/shop/e6fecbf5068ea96b2cbaa8074747f546" target="_blank" rel="noopener">ラクマ店</a></li>
+  </ul>
+</div>
+
+  </div>
   </main>
 
   <footer class="site-footer">

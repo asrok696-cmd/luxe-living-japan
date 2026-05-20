@@ -2203,7 +2203,6 @@ textarea {
     height: auto;
     aspect-ratio: 4 / 5;
   }
-
   /* Set Detail */
   .set-detail-page {
     padding: 40px 0;
@@ -2373,5 +2372,170 @@ textarea {
   .section-label {
     font-size: 13px;
     letter-spacing: 1.5px;
+  }
+}
+/* =========================
+   Sets page desktop layout
+========================= */
+
+@media (min-width: 1025px) {
+  .sets-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+    align-items: start !important;
+  }
+
+  .sets-grid .set-card {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  .sets-grid .set-card img {
+    width: 100% !important;
+    height: 340px !important;
+    object-fit: cover !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sets-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sets-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+/* =========================
+   Sets guide section spacing fix
+========================= */
+
+.sets-page .sets-guide-section {
+  width: min(100% - 40px, 1200px);
+  margin: 96px auto 120px;
+  padding: 0;
+}
+
+.sets-page .sets-guide-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 32px !important;
+  margin-bottom: 32px !important;
+}
+
+.sets-page .sets-guide-section > .info-card {
+  margin-bottom: 32px !important;
+}
+
+.sets-page .info-card {
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 24px !important;
+  padding: 36px !important;
+  box-shadow: 0 10px 30px rgba(32, 28, 24, 0.06) !important;
+}
+
+.sets-page .info-card h2 {
+  font-size: 30px !important;
+  line-height: 1.35 !important;
+  margin-bottom: 18px !important;
+}
+
+.sets-page .info-card h3 {
+  font-size: 20px !important;
+  margin-top: 22px !important;
+  margin-bottom: 8px !important;
+}
+
+.sets-page .info-card p,
+.sets-page .info-card li {
+  font-size: 15px !important;
+  line-height: 1.9 !important;
+}
+
+@media (max-width: 800px) {
+  .sets-page .sets-guide-section {
+    width: min(100% - 24px, 1200px);
+    margin: 64px auto 80px;
+  }
+
+  .sets-page .sets-guide-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .sets-page .info-card {
+    padding: 24px 20px !important;
+  }
+}
+/* =========================
+   FINAL SET CARD DESIGN FIX
+========================= */
+
+.sets-page .set-card {
+  background: #fff !important;
+  border-radius: 34px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(32, 28, 24, 0.06) !important;
+  border: 1px solid #ebe4dc !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.sets-page .set-card img {
+  width: 100% !important;
+  height: 420px !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 0 !important;
+}
+
+.sets-page .set-card-content {
+  padding: 28px !important;
+  background: #fff !important;
+  flex: 1 !important;
+}
+
+.sets-page .set-card h2 {
+  font-size: 28px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 14px !important;
+  font-weight: 700 !important;
+  color: #1f1d1b !important;
+}
+
+.sets-page .set-price {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin-bottom: 18px !important;
+  color: #1f1d1b !important;
+}
+
+.sets-page .set-description {
+  font-size: 15px !important;
+  line-height: 1.9 !important;
+  color: #6d685f !important;
+}
+
+@media (max-width: 768px) {
+  .sets-page .set-card img {
+    height: 320px !important;
+  }
+
+  .sets-page .set-card-content {
+    padding: 22px !important;
+  }
+
+  .sets-page .set-card h2 {
+    font-size: 24px !important;
   }
 }
