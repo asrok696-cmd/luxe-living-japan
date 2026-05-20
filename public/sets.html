@@ -13,6 +13,16 @@
 
   <link rel="stylesheet" href="/style.css" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18174757025"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18174757025');
+  </script>
+
   <style>
     .sets-page {
       padding: 80px 0;
@@ -65,38 +75,38 @@
       line-height: 1.7;
     }
 
-   .sets-guide-section {
-  margin-bottom: 72px;
-}
+    .sets-guide-section {
+      margin-bottom: 72px;
+    }
 
-.sets-guide-section > .sets-guide-grid,
-.sets-guide-section > .info-card {
-  margin-bottom: 32px;
-}
+    .sets-guide-section > .sets-guide-grid,
+    .sets-guide-section > .info-card {
+      margin-bottom: 32px;
+    }
 
-.sets-guide-section > .sets-guide-grid:last-child {
-  margin-bottom: 0;
-}
+    .sets-guide-section > .sets-guide-grid:last-child {
+      margin-bottom: 0;
+    }
 
-.sets-guide-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
+    .sets-guide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 32px;
+    }
 
-.info-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: 36px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
+    .info-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
 
-.sets-guide-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-bottom: 32px;
-}
+    @media (max-width: 800px) {
+      .sets-guide-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
