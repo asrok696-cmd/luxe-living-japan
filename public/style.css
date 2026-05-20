@@ -2291,3 +2291,87 @@ textarea {
     max-width: 100%;
   }
 }
+
+/* =========================
+   Mobile Optimization
+========================= */
+
+@media (max-width: 768px) {
+
+  .sets-page {
+    padding: 48px 0;
+  }
+
+  .sets-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .set-card img {
+    height: 280px;
+  }
+
+  .set-card-content {
+    padding: 18px;
+  }
+
+  .set-card h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .set-price {
+    font-size: 18px;
+  }
+
+  .set-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .info-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .info-card h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .info-card ol,
+  .info-card ul {
+    padding-left: 20px;
+  }
+
+  .sets-guide-section {
+    margin-bottom: 48px;
+  }
+
+  .sets-guide-grid {
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 34px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .section-label {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+}
