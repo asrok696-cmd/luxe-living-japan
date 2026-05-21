@@ -237,59 +237,73 @@
 
   <h2>このセットについて問い合わせる</h2>
 
-              サイズ変更・カラー変更・配送エリア・組み合わせ変更などをご希望の場合は、こちらからご相談ください。
-            </p>
+<p>
+  サイズ変更・カラー変更・配送エリア・組み合わせ変更などをご希望の場合は、こちらからご相談ください。
+</p>
 
-            <input type="hidden" name="希望セット" id="formSetName" />
+<input type="hidden" name="希望セット" id="formSetName" required />
 
-            <div class="form-row">
-              <label for="name">お名前</label>
-              <input type="text" id="name" name="お名前" required />
-            </div>
+<div class="form-row">
+  <label for="name">お名前</label>
+  <input type="text" id="name" name="お名前" required />
+</div>
 
-            <div class="form-row">
-              <label for="email">メールアドレス</label>
-              <input type="email" id="email" name="メールアドレス" required />
-            </div>
+<div class="form-row">
+  <label for="email">メールアドレス</label>
+  <input type="email" id="email" name="メールアドレス" required />
+</div>
 
-            <div class="form-row">
-              <label for="phone">電話番号 任意</label>
-              <input type="tel" id="phone" name="電話番号" />
-            </div>
+<div class="form-row">
+  <label for="phone">電話番号</label>
+  <input type="tel" id="phone" name="電話番号" required />
+</div>
 
-            <div class="form-row">
-              <label for="plan">希望プラン</label>
-              <select id="plan" name="希望プラン">
-                <option value="Aプラン">Aプラン</option>
-                <option value="Bプラン">Bプラン</option>
-                <option value="相談したい">相談したい</option>
-                <option value="なし">なし</option>
-              </select>
-            </div>
+<div class="form-row">
+  <label for="plan">希望プラン</label>
+  <select id="plan" name="希望プラン" required>
+    <option value="">選択してください</option>
+    <option value="Aプラン">Aプラン</option>
+    <option value="Bプラン">Bプラン</option>
+    <option value="相談したい">相談したい</option>
+    <option value="なし">なし</option>
+  </select>
+</div>
 
-            <div class="form-row">
-              <label for="area">配送先エリア</label>
-              <input type="text" id="area" name="配送先エリア" placeholder="例：東京都港区 / 福岡県福岡市" />
-            </div>
+<div class="form-row">
+  <label for="area">配送先エリア</label>
+  <input
+    type="text"
+    id="area"
+    name="配送先エリア"
+    placeholder="例：東京都港区 / 福岡県福岡市"
+    required
+  />
+</div>
 
-            <div class="form-row">
-              <label for="budget">ご予算</label>
-              <input type="text" id="budget" name="ご予算" placeholder="例：50万円〜80万円" />
-            </div>
+<div class="form-row">
+  <label for="budget">ご予算</label>
+  <input
+    type="text"
+    id="budget"
+    name="ご予算"
+    placeholder="例：50万円〜80万円"
+    required
+  />
+</div>
 
-            <div class="form-row">
-              <label for="message">ご相談内容</label>
-              <textarea
-                id="message"
-                name="ご相談内容"
-                placeholder="希望サイズ、カラー、搬入条件、組み合わせ変更などをご記入ください。"
-              ></textarea>
-            </div>
+<div class="form-row">
+  <label for="message">ご相談内容</label>
+  <textarea
+    id="message"
+    name="ご相談内容"
+    placeholder="希望サイズ、カラー、搬入条件、組み合わせ変更などをご記入ください。"
+    required
+  ></textarea>
+</div>
 
-            <button type="submit" class="submit-btn">
-              送信する
-            </button>
-          </form>
+<button type="submit" class="submit-btn">
+  送信する
+</button>
         </div>
       </div>
     </div>
