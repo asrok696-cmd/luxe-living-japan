@@ -5261,7 +5261,7 @@ function buildAbsoluteUrl(path = "") {
     return `${getBaseUrl()}${path.startsWith("/") ? "" : "/"}${path}`;
   }
 }
-}
+
 function getProductKeyFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const queryProduct = params.get("product");
@@ -5269,7 +5269,11 @@ function getProductKeyFromUrl() {
   if (queryProduct && PRODUCT_DATA[queryProduct]) {
     return queryProduct;
   }
+const hashProduct = window.location.hash.replace("#", "");
 
+if (hashProduct && PRODUCT_DATA[hashProduct]) {
+  return hashProduct;
+}
   const currentPath = window.location.pathname;
   const pathParts = currentPath.split("/").filter(Boolean);
   const slug = pathParts[pathParts.length - 1];
