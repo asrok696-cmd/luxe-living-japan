@@ -6290,7 +6290,25 @@ if (filterLists.length > 0) {
         e.preventDefault();
 
         const filterValue = link.dataset.filterValue || "all";
+if (group === "category") {
+  const hashMap = {
+    "ソファ": "sofa",
+    "ベッド": "bed",
+    "マットレス": "mattress",
+    "テーブル": "table",
+    "ダイニングセット": "dining",
+    "セット商品": "sets",
+    "all": ""
+  };
 
+  const hash = hashMap[filterValue];
+
+  if (hash) {
+    history.pushState(null, "", `#${hash}`);
+  } else {
+    history.pushState(null, "", window.location.pathname);
+  }
+}
         links.forEach((item) => item.classList.remove("active"));
         link.classList.add("active");
 
