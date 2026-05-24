@@ -5238,19 +5238,30 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
-
 function getBaseUrl() {
+  const hostname = window.location.hostname;
+
+  // GitHub Pages 対応
+  if (hostname.includes("github.io")) {
+    return `${window.location.origin}/Luxe-Living-Japan`;
+  }
+
   return window.location.origin;
 }
 
 function buildAbsoluteUrl(path = "") {
   try {
-    return new URL(path, getBaseUrl()).toString();
+    // すでに絶対URLならそのまま返す
+    if (path.startsWith("http://") || path.startsWith("https://")) {
+      return path;
+    }
+
+    return new URL(path, getBaseUrl() + "/").toString();
   } catch {
-    return `${getBaseUrl()}${path}`;
+    return `${getBaseUrl()}${path.startsWith("/") ? "" : "/"}${path}`;
   }
 }
-
+}
 function getProductKeyFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const queryProduct = params.get("product");
