@@ -1,5 +1,4 @@
-</body>
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
@@ -51,7 +50,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18174757025');
   </script>
 </head>
@@ -105,17 +103,16 @@
 
     <section class="shop-layout-section">
       <div class="container shop-layout">
-        <aside class="shop-sidebar">
+        <aside class="shop-sidebar" id="shopSidebar">
           <div class="sidebar-block">
             <h3>カテゴリー</h3>
             <ul class="shop-filter-list" data-filter-group="category">
               <li><a href="#" class="active" data-filter-value="all">すべて</a></li>
               <li><a href="#sofa" data-filter-value="ソファ">ソファ</a></li>
-<li><a href="#bed" data-filter-value="ベッド">ベッド</a></li>
-<li><a href="#mattress" data-filter-value="マットレス">マットレス</a></li>
-<li><a href="#table" data-filter-value="テーブル">テーブル</a></li>
-<li><a href="#dining" data-filter-value="ダイニングセット">ダイニングセット</a></li>
-<li><a href="#sets" data-filter-value="セット商品">セット商品</a></li>
+              <li><a href="#bed" data-filter-value="ベッド">ベッド</a></li>
+              <li><a href="#mattress" data-filter-value="マットレス">マットレス</a></li>
+              <li><a href="#dining" data-filter-value="ダイニングセット">ダイニングセット</a></li>
+              <li><a href="#sets" data-filter-value="セット商品">セット商品</a></li>
             </ul>
           </div>
 
@@ -156,27 +153,36 @@
             </div>
           </div>
 
+          <div class="shop-mobile-chips" data-filter-group="category">
+  <button type="button" class="shop-chip active" data-filter-value="all">すべて</button>
+  <button type="button" class="shop-chip" data-filter-value="ソファ">ソファ</button>
+  <button type="button" class="shop-chip" data-filter-value="ベッド">ベッド</button>
+  <button type="button" class="shop-chip" data-filter-value="マットレス">マットレス</button>
+  <button type="button" class="shop-chip" data-filter-value="テーブル">テーブル</button>
+  <button type="button" class="shop-chip" data-filter-value="ダイニングセット">ダイニング</button>
+  <button type="button" class="shop-chip" data-filter-value="セット商品">セット商品</button>
+</div>
+
           <div class="shop-grid" id="shopGrid">
-
-
             <a
-  href="sets.html"
-  class="shop-product-card"
-  data-category="セット商品"
-  data-space="リビング ベッドルーム ダイニング"
->
-  <div
-    class="shop-product-image"
-    style="background-image: url('images/sets/luxury-room-set-01.jpg');"
-  ></div>
+              href="sets.html"
+              class="shop-product-card"
+              data-category="セット商品"
+              data-space="リビング ベッドルーム ダイニング"
+            >
+              <div
+                class="shop-product-image"
+                style="background-image: url('images/sets/luxury-room-set-01.jpg');"
+              ></div>
 
-  <div class="shop-product-info">
-    <p class="product-badge">相談対応</p>
-    <h3>セット商品</h3>
-    <p class="product-type">コーディネートセット</p>
-    <p class="product-price">¥499,000〜</p>
-  </div>
-</a>
+              <div class="shop-product-info">
+                <p class="product-badge">相談対応</p>
+                <h3>セット商品</h3>
+                <p class="product-type">コーディネートセット</p>
+                <p class="product-price">¥499,000〜</p>
+              </div>
+            </a>
+
             <a
               href="/products/sofas/luna-lounge-sofa-150-white"
               class="shop-product-card"
@@ -1131,7 +1137,7 @@
     <div class="container footer-bottom">
       <p>© 2026 Luxe Living Japan. All rights reserved.</p>
     </div>
-  </footer>
+    </footer>
 
   <script src="/script.js"></script>
 </body>

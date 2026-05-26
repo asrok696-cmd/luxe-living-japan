@@ -6,7 +6,7 @@
   <title>Luxe Living Japan</title>
   <meta
     name="description"
-    content="ミニマルで洗練された家具コレクション。静かな存在感をもつ家具をギャラリーのように提案します。"
+    content="Luxe Living Japan。高級ソファ・ベッド・ダイニング・セット商品を、洗練された空間提案とともにご紹介します。"
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,9 +23,504 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18174757025');
   </script>
+
+  <style>
+    .home-luxe {
+      background: #fbfaf7;
+    }
+
+    .home-hero {
+      padding: 34px 0 72px;
+      background: linear-gradient(180deg, #faf7f2 0%, #fbfaf7 100%);
+    }
+
+    .home-hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .home-hero-media {
+      order: 2;
+    }
+
+    .home-hero-image {
+      width: 100%;
+      min-height: 720px;
+      border-radius: 18px;
+      background:
+        linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.03)),
+        url("./images/hero.jpg") center center / cover no-repeat;
+      box-shadow: 0 18px 44px rgba(24, 20, 18, 0.07);
+    }
+
+    .home-hero-copy {
+      order: 1;
+      max-width: 560px;
+    }
+
+    .home-kicker {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .home-hero-copy h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 96px);
+      line-height: 0.95;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: #171614;
+      margin-bottom: 22px;
+    }
+
+    .home-hero-copy p {
+      max-width: 500px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .home-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .home-section {
+      padding: 88px 0;
+    }
+
+    .home-scroll-categories {
+      display: none;
+    }
+
+    .home-categories-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .home-category-card {
+      display: block;
+      background: #fff;
+      border: 1px solid #ebe4db;
+      border-radius: 20px;
+      padding: 24px 22px;
+      box-shadow: 0 10px 30px rgba(32, 28, 24, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .home-category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px rgba(24, 20, 18, 0.08);
+    }
+
+    .home-category-card span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .home-category-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      line-height: 1.08;
+      font-weight: 600;
+      color: #1b1917;
+    }
+
+    .home-featured-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .home-product-card {
+      display: block;
+      background: #fff;
+      border: 1px solid #ebe4db;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(32, 28, 24, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .home-product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 36px rgba(24, 20, 18, 0.08);
+    }
+
+    .home-product-image {
+      width: 100%;
+      height: 380px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .home-product-body {
+      padding: 22px;
+    }
+
+    .home-product-body .product-type {
+      margin-bottom: 8px;
+    }
+
+    .home-product-body h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      line-height: 1.08;
+      font-weight: 600;
+      color: #1d1b19;
+      margin-bottom: 12px;
+    }
+
+    .home-room-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .home-room-card {
+      display: block;
+      position: relative;
+      min-height: 460px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ddd;
+      box-shadow: 0 12px 34px rgba(24, 20, 18, 0.07);
+    }
+
+    .home-room-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.34) 100%);
+    }
+
+    .home-room-card.living {
+      background: url("./images/sofa.jpg") center/cover no-repeat;
+    }
+
+    .home-room-card.bedroom {
+      background: url("./images/hero.jpg") center/cover no-repeat;
+    }
+
+    .home-room-card.dining {
+      background: url("./images/table.jpg") center/cover no-repeat;
+    }
+
+    .home-room-copy {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1;
+      color: #fff;
+    }
+
+    .home-room-copy span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.88;
+      margin-bottom: 10px;
+    }
+
+    .home-room-copy h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+      line-height: 1.04;
+      font-weight: 600;
+    }
+
+    .home-banner {
+      background: #f3ede5;
+      border: 1px solid #e6ddd1;
+      border-radius: 28px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .home-banner-copy h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1.06;
+      font-weight: 600;
+      color: #171614;
+      margin-bottom: 14px;
+    }
+
+    .home-banner-copy p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 22px;
+      max-width: 560px;
+    }
+
+    .home-banner-visual {
+      min-height: 340px;
+      border-radius: 22px;
+      background:
+        linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.03)),
+        url("./images/sets/luxury-room-set-01.jpg") center/cover no-repeat;
+    }
+
+    .home-statement-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .home-statement-wrap h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.02;
+      font-weight: 600;
+      color: #171614;
+    }
+
+    .home-statement-wrap p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.95;
+      max-width: 560px;
+    }
+
+    .home-contact-box {
+      background: #fff;
+      border: 1px solid #ebe4db;
+      border-radius: 28px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(32, 28, 24, 0.04);
+    }
+
+    .home-contact-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1.08;
+      font-weight: 600;
+      color: #171614;
+      margin-bottom: 12px;
+    }
+
+    .home-contact-box p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .home-contact-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .home-divider-top {
+      border-top: 1px solid #eee8df;
+    }
+
+    @media (max-width: 1100px) {
+      .home-hero-grid,
+      .home-banner,
+      .home-statement-wrap,
+      .home-contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .home-hero-media {
+        order: 1;
+      }
+
+      .home-hero-copy {
+        order: 2;
+        max-width: 100%;
+      }
+
+      .home-featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .home-room-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .home-categories-wrap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .home-contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-hero {
+        padding: 18px 0 42px;
+      }
+
+      .home-hero-grid {
+        gap: 24px;
+      }
+
+      .home-hero-image {
+        min-height: 430px;
+        border-radius: 14px;
+        background-position: center;
+      }
+
+      .home-kicker {
+        margin-bottom: 12px;
+      }
+
+      .home-hero-copy h1 {
+        font-size: 42px;
+        line-height: 0.98;
+        margin-bottom: 16px;
+      }
+
+      .home-hero-copy p {
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 20px;
+      }
+
+      .home-hero-actions {
+        gap: 10px;
+      }
+
+      .home-hero-actions .btn,
+      .home-hero-actions .mg-link {
+        width: 100%;
+        text-align: center;
+      }
+
+      .home-section {
+        padding: 56px 0;
+      }
+
+      .home-categories-wrap {
+        display: none;
+      }
+
+      .home-scroll-categories {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        margin-top: 20px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .home-scroll-categories::-webkit-scrollbar {
+        display: none;
+      }
+
+      .home-scroll-categories a {
+        flex: 0 0 auto;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: #fff;
+        border: 1px solid #e8dfd4;
+        color: #1f1d1b;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .home-featured-grid,
+      .home-room-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .home-product-image {
+        height: 300px;
+      }
+
+      .home-product-body {
+        padding: 18px;
+      }
+
+      .home-product-body h3 {
+        font-size: 23px;
+      }
+
+      .home-room-card {
+        min-height: 320px;
+      }
+
+      .home-room-copy {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .home-room-copy h3 {
+        font-size: 28px;
+      }
+
+      .home-banner,
+      .home-contact-box {
+        padding: 26px 22px;
+        border-radius: 22px;
+      }
+
+      .home-banner-visual {
+        min-height: 240px;
+      }
+
+      .home-statement-wrap p,
+      .home-banner-copy p,
+      .home-contact-box p {
+        font-size: 15px;
+      }
+
+      .mg-newsletter-box {
+        padding: 26px 22px !important;
+      }
+
+      .mg-newsletter-box h2 {
+        font-size: 30px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .newsletter-form {
+        width: 100%;
+        gap: 10px;
+      }
+
+      .newsletter-form input,
+      .newsletter-form .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -41,6 +536,7 @@
 
         <div class="header-right header-right-main">
           <a href="shop.html" class="header-link desktop-only">商品</a>
+          <a href="sets.html" class="header-link desktop-only">セット商品</a>
           <a href="about.html" class="header-link desktop-only">会社概要</a>
           <a href="contact.html" class="header-link desktop-only">お問い合わせ</a>
           <a href="cart.html" class="header-link cart-link">カート (0)</a>
@@ -57,6 +553,7 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html">ホーム</a>
       <a href="shop.html">商品</a>
+      <a href="sets.html">セット商品</a>
       <a href="about.html">会社概要</a>
       <a href="contact.html">お問い合わせ</a>
       <a href="legal-notice.html">特定商取引法に基づく表記</a>
@@ -64,165 +561,201 @@
     </div>
   </header>
 
-  <main class="mg-home">
-    <section class="mg-hero">
-      <div class="container mg-hero-grid">
-        <div class="mg-hero-copy">
-          <p class="mg-kicker">MODERN GALLERY / CURATED OBJECTS</p>
+  <main class="home-luxe">
+    <section class="home-hero">
+      <div class="container home-hero-grid">
+        <div class="home-hero-copy">
+          <p class="home-kicker">Curated Luxury Furniture</p>
           <h1>
-            Objects for<br />
-            quiet rooms<br />
-            and clear minds.
+            Quiet luxury<br />
+            for modern<br />
+            living.
           </h1>
-          <p class="mg-hero-text">
-            家具をただ並べるのではなく、空間に置かれたときの空気まで含めて提案する。
-            Luxe Living Japan のモダンギャラリーコレクション。
+          <p>
+            ソファ、ベッド、ダイニング、セット商品まで。
+            Luxe Living Japan は、空間全体の印象まで整えるラグジュアリー家具をセレクトしています。
           </p>
-          <div class="mg-hero-actions">
+          <div class="home-hero-actions">
             <a href="shop.html" class="btn btn-dark">商品を見る</a>
-            <a href="about.html" class="mg-link">コンセプトを見る</a>
+            <a href="sets.html" class="btn btn-light">セット商品を見る</a>
           </div>
         </div>
 
-        <div class="mg-hero-visual">
-          <div class="mg-hero-image"></div>
+        <div class="home-hero-media">
+          <div class="home-hero-image"></div>
         </div>
       </div>
     </section>
 
-    <section class="mg-grid-section">
+    <section class="home-section">
       <div class="container">
-        <div class="mg-grid">
-          <a href="product.html?product=lagos-dining-set-160" class="mg-card mg-card-large">
-            <div
-              class="mg-card-image"
-              style="background-image: url('images/placeholders/lagos-dining-set-160-1.jpg');"
-            ></div>
-            <div class="mg-card-copy">
-              <span>Featured</span>
-              <h3>ラゴス ダイニングセット 160</h3>
-            </div>
-          </a>
-
-          <a href="product.html?product=luna-lounge-sofa-150" class="mg-card">
-            <div
-              class="mg-card-image"
-              style="background-image: url('images/placeholders/luna-lounge-sofa-150-1.jpg');"
-            ></div>
-            <div class="mg-card-copy">
-              <span>ソファ</span>
-              <h3>ルーナ ラウンジソファ 150 ホワイト</h3>
-            </div>
-          </a>
-
-          <a href="product.html?product=louve-dining-table-180" class="mg-card">
-            <div
-              class="mg-card-image"
-              style="background-image: url('images/placeholders/louve-dining-table-180-1.jpg');"
-            ></div>
-            <div class="mg-card-copy">
-              <span>テーブル</span>
-              <h3>ルーヴェ ダイニングテーブル 180</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="mg-statement section">
-      <div class="container mg-statement-grid">
-        <div>
-          <p class="section-label">Statement</p>
-          <h2>Furniture as form, proportion, and atmosphere.</h2>
-        </div>
-        <div>
-          <p class="mg-statement-text">
-            余白、輪郭、素材感。装飾を減らし、必要なものだけを残すことで、
-            家具はより強く、美しく見える。そんな考え方でセレクトしています。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mg-categories section">
-      <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" style="margin-bottom: 18px;">
           <p class="section-label">Categories</p>
-          <h2>ギャラリーから探す</h2>
+          <h2>カテゴリーから探す</h2>
         </div>
 
-        <div class="mg-categories-grid">
-          <a href="shop.html" class="mg-category-item">
+        <div class="home-categories-wrap">
+          <a href="shop.html#sofa" class="home-category-card">
             <span>01</span>
             <h3>ソファ</h3>
           </a>
 
-          <a href="shop.html" class="mg-category-item">
+          <a href="shop.html#bed" class="home-category-card">
             <span>02</span>
             <h3>ベッド</h3>
           </a>
 
-          <a href="shop.html" class="mg-category-item">
+        
+          <a href="shop.html#dining" class="home-category-card">
             <span>03</span>
-            <h3>テーブル</h3>
+            <h3>ダイニング</h3>
           </a>
+        </div>
 
-          <a href="shop.html" class="mg-category-item">
-            <span>04</span>
-            <h3>ダイニングセット</h3>
-          </a>
+        <div class="home-scroll-categories">
+          <a href="shop.html#sofa">ソファ</a>
+          <a href="shop.html#bed">ベッド</a>
+          <a href="shop.html#table">テーブル</a>
+          <a href="shop.html#dining">ダイニング</a>
+          <a href="sets.html">セット商品</a>
         </div>
       </div>
     </section>
 
-    <section class="mg-products section">
+    <section class="home-section home-divider-top">
       <div class="container">
         <div class="home-heading-row">
           <div>
-            <p class="section-label">Selected Works</p>
+            <p class="section-label">Featured</p>
             <h2 style="font-family:'Playfair Display', serif; font-size:clamp(34px, 4vw, 56px); line-height:1.08; font-weight:600;">
-              Gallery picks
+              人気の商品
             </h2>
           </div>
-          <a href="shop.html" class="mg-link">すべての商品</a>
+          <a href="shop.html" class="text-link">すべての商品</a>
         </div>
 
-        <div class="mg-products-grid">
-          <a href="product.html?product=olvia-bed-frame" class="mg-product-card">
-            <div
-              class="mg-product-image"
-              style="background-image: url('images/placeholders/olvia-bed-frame-1.jpg');"
-            ></div>
-            <div class="mg-product-body">
+        <div class="home-featured-grid">
+          <a href="product.html?product=olvia-bed-frame" class="home-product-card">
+            <div class="home-product-image" style="background-image: url('images/placeholders/olvia-bed-frame-1.jpg');"></div>
+            <div class="home-product-body">
               <p class="product-type">ベッド</p>
               <h3>オルビア ベッドフレーム</h3>
               <p class="product-price">¥185,900〜</p>
             </div>
           </a>
 
-          <a href="product.html?product=luna-curve-sofa-260" class="mg-product-card">
-            <div
-              class="mg-product-image"
-              style="background-image: url('images/placeholders/luna-curve-sofa-260-1.jpg');"
-            ></div>
-            <div class="mg-product-body">
+          <a href="product.html?product=luna-curve-sofa-260" class="home-product-card">
+            <div class="home-product-image" style="background-image: url('images/placeholders/luna-curve-sofa-260-1.jpg');"></div>
+            <div class="home-product-body">
               <p class="product-type">ソファ</p>
               <h3>ルーナ カーブソファ 260 ベージュ</h3>
               <p class="product-price">¥218,900</p>
             </div>
           </a>
 
-          <a href="product.html?product=luna-stone-dining-set-160" class="mg-product-card">
-            <div
-              class="mg-product-image"
-              style="background-image: url('images/placeholders/luna-stone-dining-set-160-1.jpg');"
-            ></div>
-            <div class="mg-product-body">
+          <a href="product.html?product=luna-stone-dining-set-160" class="home-product-card">
+            <div class="home-product-image" style="background-image: url('images/placeholders/luna-stone-dining-set-160-1.jpg');"></div>
+            <div class="home-product-body">
               <p class="product-type">ダイニングセット</p>
               <h3>ルーナ ストーンダイニングセット 160</h3>
               <p class="product-price">¥207,900</p>
             </div>
           </a>
+
+          <a href="product.html?product=ceres-quilted-bed-frame-white" class="home-product-card">
+            <div class="home-product-image" style="background-image: url('images/placeholders/ceres-quilted-bed-frame-1.jpg');"></div>
+            <div class="home-product-body">
+              <p class="product-type">ベッド</p>
+              <h3>セレス キルティングベッドフレーム</h3>
+              <p class="product-price">¥196,900</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" style="background:#fff;">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Rooms</p>
+          <h2>空間から選ぶ</h2>
+        </div>
+
+        <div class="home-room-grid">
+          <a href="shop.html#sofa" class="home-room-card living">
+            <div class="home-room-copy">
+              <span>Living</span>
+              <h3>リビング</h3>
+            </div>
+          </a>
+
+          <a href="shop.html#bed" class="home-room-card bedroom">
+            <div class="home-room-copy">
+              <span>Bedroom</span>
+              <h3>ベッドルーム</h3>
+            </div>
+          </a>
+
+          <a href="shop.html#dining" class="home-room-card dining">
+            <div class="home-room-copy">
+              <span>Dining</span>
+              <h3>ダイニング</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="home-banner">
+          <div class="home-banner-copy">
+            <p class="section-label">Coordinate Sets</p>
+            <h2>空間をまとめて整える<br />セット商品</h2>
+            <p>
+              ソファ、ベッド、ダイニングを組み合わせたセット商品もご用意しています。
+              引っ越しや新生活、民泊・賃貸物件のトータルコーディネートにもおすすめです。
+            </p>
+            <a href="sets.html" class="btn btn-dark">セット商品を見る</a>
+          </div>
+
+          <div class="home-banner-visual"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-divider-top" style="background:#fff;">
+      <div class="container home-statement-wrap">
+        <div>
+          <p class="section-label">Statement</p>
+          <h2>Furniture as atmosphere, not only function.</h2>
+        </div>
+
+        <div>
+          <p>
+            余白、素材、輪郭、そして空間に置かれたときの静かな存在感。
+            Luxe Living Japan は、家具単体ではなく、部屋全体の空気まで含めて選びたくなるコレクションを目指しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="home-contact-box">
+          <div>
+            <p class="section-label">Support</p>
+            <h2>サイズや組み合わせも<br />お気軽にご相談ください</h2>
+            <p>
+              ご希望のサイズ変更、カラー相談、配送エリア、セット商品の組み合わせ変更なども対応可能です。
+              ショールーム見学やLINEビデオ通話でのご相談も承ります。
+            </p>
+          </div>
+
+          <div class="home-contact-actions">
+            <a href="contact.html" class="btn btn-dark">お問い合わせ</a>
+            <a href="about.html" class="btn btn-light">会社概要を見る</a>
+          </div>
         </div>
       </div>
     </section>
@@ -232,7 +765,7 @@
         <div>
           <p class="section-label">Newsletter</p>
           <h2>新着コレクションを受け取る</h2>
-          <p>新しいセレクションやコレクション情報を受け取りたい方はこちら。</p>
+          <p>新商品やセレクション情報を受け取りたい方はこちら。</p>
         </div>
 
         <form class="newsletter-form">
@@ -255,6 +788,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
+          <li><a href="sets.html">Set Products</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="legal-notice.html">特定商取引法に基づく表記</a></li>
         </ul>
