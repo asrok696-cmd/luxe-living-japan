@@ -6290,25 +6290,26 @@ if (filterLists.length > 0) {
         e.preventDefault();
 
         const filterValue = link.dataset.filterValue || "all";
-if (group === "category") {
-  const hashMap = {
-    "ソファ": "sofa",
-    "ベッド": "bed",
-    "マットレス": "mattress",
-    "テーブル": "table",
-    "ダイニングセット": "dining",
-    "セット商品": "sets",
-    "all": ""
-  };
 
-  const hash = hashMap[filterValue];
+        if (group === "category") {
+          const hashMap = {
+            "ソファ": "sofa",
+            "ベッド": "bed",
+            "マットレス": "mattress",
+            "ダイニングセット": "dining",
+            "セット商品": "sets",
+            "all": ""
+          };
 
-  if (hash) {
-    history.pushState(null, "", `#${hash}`);
-  } else {
-    history.pushState(null, "", window.location.pathname);
-  }
-}
+          const hash = hashMap[filterValue];
+
+          if (hash) {
+            history.pushState(null, "", `#${hash}`);
+          } else {
+            history.pushState(null, "", window.location.pathname);
+          }
+        }
+
         links.forEach((item) => item.classList.remove("active"));
         link.classList.add("active");
 
@@ -6316,8 +6317,65 @@ if (group === "category") {
           activeFilters[group] = filterValue;
         }
 
+        const mobileChips = document.querySelectorAll(".shop-mobile-chips .shop-chip");
+        if (group === "category" && mobileChips.length > 0) {
+          mobileChips.forEach((chip) => {
+            chip.classList.toggle(
+              "active",
+              (chip.dataset.filterValue || "all") === filterValue
+            );
+          });
+        }
+
         applyShopFilters();
       });
+    });
+  });
+}
+
+const mobileChips = document.querySelectorAll(".shop-mobile-chips .shop-chip");
+
+if (mobileChips.length > 0) {
+  mobileChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const filterValue = chip.dataset.filterValue || "all";
+
+      const hashMap = {
+        "ソファ": "sofa",
+        "ベッド": "bed",
+        "マットレス": "mattress",
+        "ダイニングセット": "dining",
+        "セット商品": "sets",
+        "all": ""
+      };
+
+      const hash = hashMap[filterValue];
+
+      if (hash) {
+        history.pushState(null, "", `#${hash}`);
+      } else {
+        history.pushState(null, "", window.location.pathname);
+      }
+
+      mobileChips.forEach((item) => item.classList.remove("active"));
+      chip.classList.add("active");
+
+      const categoryLinks = document.querySelectorAll(
+        '.shop-filter-list[data-filter-group="category"] a'
+      );
+
+      categoryLinks.forEach((link) => {
+        link.classList.toggle(
+          "active",
+          (link.dataset.filterValue || "all") === filterValue
+        );
+      });
+
+      if (activeFilters.category !== undefined) {
+        activeFilters.category = filterValue;
+      }
+
+      applyShopFilters();
     });
   });
 }
@@ -6363,7 +6421,46 @@ if (checkoutButton) {
   });
 }
 
+
+
+const initialHash = window.location.hash.replace("#", "");
+
+if (initialHash) {
+  const reverseHashMap = {
+    sofa: "ソファ",
+    bed: "ベッド",
+    mattress: "マットレス",
+    dining: "ダイニングセット",
+    sets: "セット商品"
+  };
+
+  const initialCategory = reverseHashMap[initialHash];
+
+  if (initialCategory && activeFilters.category !== undefined) {
+    activeFilters.category = initialCategory;
+
+    const categoryLinks = document.querySelectorAll(
+      '.shop-filter-list[data-filter-group="category"] a'
+    );
+
+    categoryLinks.forEach((link) => {
+      link.classList.toggle(
+        "active",
+        (link.dataset.filterValue || "all") === initialCategory
+      );
+    });
+
+    const mobileChips = document.querySelectorAll(".shop-mobile-chips .shop-chip");
+    mobileChips.forEach((chip) => {
+      chip.classList.toggle(
+        "active",
+        (chip.dataset.filterValue || "all") === initialCategory
+      );
+    });
+  }
+}
 updateCartCountUI();
 renderCartPage();
 applyShopFilters();
 });
+
